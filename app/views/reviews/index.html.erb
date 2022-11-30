@@ -1,1 +1,8 @@
-<h1>Our first view 🚀</h1>
+<h1>Reviews</h1>
+<ul>
+  <% @reviews.each do |review| %>
+    <li>
+      <%= review.comment %>
+    </li>
+  <% end %>
+</ul>
