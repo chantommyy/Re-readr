@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @review = Review.find(params[:user_id])
     @review = Review.new
   end
 
@@ -15,13 +16,13 @@ class ReviewsController < ApplicationController
     @book = Book.all
   end
 
+  def show
+    @review = Review.find
+  end
+
   private
 
   def review_params
     params.require(:review).permit(:rating, :comment)
-  end
-
-  def show
-    @review = Review.find
   end
 end
