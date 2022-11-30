@@ -1,2 +1,14 @@
-<%# <h1>review</h1>
-render %>
+<%= simple_form_for(book) do |f| %>
+<%= f.label :name  %>
+<%= f.text_field :name %>
+<%= f.label :genre %>
+<%= f.text_field :genre %>
+<%= f.label :author %>
+<%= f.text_field :author %>
+<%= f.label :condition %>
+<%= f.text_field :condition %>
+<%= f.label :photo %>
+<%= f.text_field :photo %>
+<%= f.submit %>
+<% end %>
+
