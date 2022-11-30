@@ -1,17 +1,12 @@
 class BooksController < ApplicationController
-  #add a before action set_book
-  #before_action :set_book, only: [:index, :show, :update, :create]
+  #before_action filter means dont need to reuse set_book
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
     @books = Book.all
   end
 
   def show
-    @book = Book.find(params[:index])
-  end
-
-  def new
-    @book = Book.new
   end
 
   def create
@@ -26,18 +21,31 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
+  end
+
+  def new
+    @book = Book.new
   end
 
   def update
-    @book = Book.find(params[:id])
     @book.update(book_params)
-    redirect_to book_booth(@book)
+    redirect_to book_path(@book)
+  end
+
+  def destroy
+    @book.delete
+    redirect_to books_path, status: :see_other
   end
 
   private
 
-  def book_params
-    params.require(:books).permit(:genre, :name, :author, :photo, :condition)
+  def set_book
+    @book = Book.find(params[:id])
   end
+
+  def book_params
+    params.require(:book).permit(:genre, :name, :author, :photo, :condition)
+  end
+
+
 end
