@@ -9,22 +9,24 @@ class BooksController < ApplicationController
   def show
   end
 
+  def new
+    @book = Book.new
+  end
+
   def create
-    @book = Book.create(book_params)
-    @book.save
-    redirect_to book_path(@book)
+    @book = Book.new(book_params)
+    @book.user_id = current_user.id
+    # @book.save
+    # redirect_to book_path(@book)
     # when validations added
-    # if @book.save
-    #   redirect_to book_path(@book)
-    # else
-    #   render :new, status: :unrprocessable_entity
+    if @book.save
+      redirect_to book_path(@book)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
-  end
-
-  def new
-    @book = Book.new
   end
 
   def update
@@ -46,6 +48,4 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:genre, :name, :author, :photo, :condition)
   end
-
-
 end

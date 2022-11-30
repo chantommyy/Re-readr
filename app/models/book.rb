@@ -3,7 +3,7 @@ class Book < ApplicationRecord
   has_many :swaps
   has_many :requests
 
-  # validates :gnere, presence: true
+  # validates :genre, presence: true
   # validates :name, presence: true
   # validates :author, presence: true
   # validates :photo, presence: true
