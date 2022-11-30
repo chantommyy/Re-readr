@@ -3,3 +3,10 @@
     <li><%= book.name %></li>
   <% end %>
 </ul>
+
+<%= cl_image_tag("ri1ehplftnnpwoduseda",
+      width: 400, height: 300, crop: :fill) %>
+
+<!-- for face detection -->
+<%= cl_image_tag("tsd9ysggspjnhvh1mrht",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
