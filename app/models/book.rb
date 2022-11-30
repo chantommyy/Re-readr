@@ -4,9 +4,8 @@ class Book < ApplicationRecord
   has_many :requests
   has_many :reviews
 
-  # validates :genre, presence: true
-  # validates :name, presence: true
-  # validates :author, presence: true
-  # validates :photo, presence: true
-  # validates :condition, presence: true
+  validates :genre, presence: true
+  validates :name, presence: true
+  validates :author, presence: true
+  validates :photo, presence: true
 end

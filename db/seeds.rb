@@ -7,7 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'open-uri'
 require 'faker'
+require "json"
+require "rest-client"
 
+Book.destroy_all
 User.destroy_all
 
 tommy = User.create!(
@@ -37,3 +40,23 @@ dylan = User.create!(
   email: "dylan@gmail.com",
   password: "123456"
 )
+
+response = RestClient.get("https://api2.isbndb.com/books/magic?page=1&pageSize=20&column=title", {accept: 'application/json', Authorization: '48828_4ec0d4456ee0bfe47c0b200f5528b2c6'})
+repos = JSON.parse(response)
+# => repos is an `Array` of `Hashes`.
+
+books = repos["books"]
+
+books.first(15).each do |book|
+  # p book["subjects"][0]
+  if book.key?("subjects")
+    Book.create!(
+      name: book["title"],
+      author: book["authors"],
+      photo: book["image"],
+      genre: book["subjects"][0],
+      user_id: saida.id
+  )
+  end
+  puts "#{book["title"]} created"
+end
