@@ -1,10 +1,26 @@
-<h1>book</h1>
+<h1>Book</h1>
 <%= @book.name %>
+<%= @book.photo %>
+<%= @book.author %>
+<%= @book.genre %>
 <br>
 <%= @book.user.first_name %> <%= @book.user.last_name %>
 <%# added link to see users reviews %>
-<%= link_to "See there reviews", own_user_reviews_path(:user_id)  %>
+<%= link_to "See the reviews", own_user_reviews_path(:user_id)  %>
+
 <p>Reviews</p>
+<% unless @reviews.nil? %>
+  <%= @reviews.each do |review| %>
+  <p><%= review %></p>
+  <% end %>
+<% end %>
 <br>
+
+<%# <%# when form is working render on new and edit.html %>
+<%= simple_form_for [@book, @request] do |f| %>
+<%= f.submit %>
+<% end %>
+
+<%# <%= link_to "Request book", book_requests_path(user_id: current_user, book_id: @book), data: {turbo_method: :post} %> %>
 <%# added link to go back to books%>
 <%= link_to "Back to Books", books_path %>

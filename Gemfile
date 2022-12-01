@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -81,5 +80,3 @@ group :test do
 end
 
 gem 'faker'
-gem "cloudinary"
-gem "dotenv-rails", groups: [:development, :test]
