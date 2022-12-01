@@ -1,8 +1,13 @@
 class ReviewsController < ApplicationController
 
+  # def index
+  #   @reviews = User.review.all
+  # end
+
   def index
-    @reviews = User.review.all
+    @reviews = Review.all
   end
+
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
@@ -16,10 +21,6 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.find(params[:user_id])
     @review = Review.new
-  end
-
-  def index
-    @reviews = Review.all
   end
 
   private
