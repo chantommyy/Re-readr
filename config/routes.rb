@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   resources :books do
     resources :requests, only: [:create]
   end
-    resources :reviews, only: [:new, :create, :show, :index] do
-      collection do
-        get :own
+    resources :users do
+      resources :reviews do
+        collection do
+          get :own
+        end
       end
     end
-
-end
+  end
