@@ -1,8 +1,13 @@
-<h1>book</h1>
+<h1>Book</h1>
 <%= @book.name %>
+<%= @book.photo %>
+<%= @book.author %>
+<%= @book.genre %>
 <br>
 <%= @book.user.first_name %> <%= @book.user.last_name %>
 <%# added link to see users reviews %>
+<%= link_to "See the reviews", own_user_reviews_path(:user_id)  %>
+
 <p>Reviews</p>
 <% unless @reviews.nil? %>
   <%= @reviews.each do |review| %>
