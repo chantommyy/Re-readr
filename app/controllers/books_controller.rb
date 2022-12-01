@@ -41,13 +41,13 @@ class BooksController < ApplicationController
     redirect_to book_path(@book)
   end
 
-    # @book = Book.create(book_params)
+  #   @book = Book.create(book_params)
 
-    # when validations added
-    # if @book.save
-    #   redirect_to book_path(@book)
-    # else
-    #   render :new, status: :unrprocessable_entity
+  #   when validations added
+  #   if @book.save
+  #     redirect_to book_path(@book)
+  #   else
+  #     render :new, status: :unrprocessable_entity
   # end
 
   def edit
