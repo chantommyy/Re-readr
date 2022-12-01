@@ -8,6 +8,7 @@ class BooksController < ApplicationController
 
   def show
     @reviews = Review.all
+    @request = Request.new
   end
 
   def new
