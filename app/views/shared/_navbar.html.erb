@@ -1,5 +1,11 @@
-<div class="navbar">
-  <a href="#search"><i class="fa-solid fa-magnifying-glass"></i></a>
-  <a href="#home"><i class="fa-light fa-house-chimney"></i></a>
-  <a href="#profile"><i class="fa-regular fa-user"></i></a>
-</div>
+  <div class="navbar">
+      <%= link_to "/search" do %>
+        <i class="fa-2x fa-solid fa-magnifying-glass"></i>
+      <% end %>
+      <%= link_to "/" do %>
+        <i class="fa-2x fa-solid fa-house"></i>
+      <% end %>
+      <%= link_to "/users/edit" do %>
+        <i class="fa-2x fa-regular fa-user"></i>
+      <% end %>
+    </div>
