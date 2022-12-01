@@ -1,17 +1,25 @@
 class RequestsController < ApplicationController
-  def new
-    @request = Request.new
+
+  def index
+    @requests = Request.where(user_id: current_user)
   end
 
   def create
-    @request = Request.new(request_params)
+    @request = Request.new
     @request.save
-    redirect_to user_requests_path(@request)
+    @book = Book.find(params[:book_id])
+    @request.user = current_user
+    @request.book = @book
+    if @request.save
+      redirect_to mydashboard_path
+    else
+      render 'books/show', status: :unrprocessable_entity
+    end
   end
 
   private
 
   def request_params
-    params.require(:request)
+    params.require(:request).permit()
   end
 end
