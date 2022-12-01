@@ -1,26 +1,34 @@
-<h1>Book</h1>
-<%= @book.name %>
-<%= @book.photo %>
-<%= @book.author %>
-<%= @book.genre %>
-<br>
-<%= @book.user.first_name %> <%= @book.user.last_name %>
-<%# added link to see users reviews %>
-<%= link_to "See the reviews", own_user_reviews_path(:user_id)  %>
+<div class="container">
+  <h1><%= @book.name[0,30] %></h1>
+  <%= link_to "Back to Books", books_path %>
 
-<p>Reviews</p>
-<% unless @reviews.nil? %>
-  <%= @reviews.each do |review| %>
-  <p><%= review %></p>
-  <% end %>
-<% end %>
-<br>
+  <div class="book-info">
+    <img src="<%= @book.photo %>" alt="book cover">
+    <p>Author: <%= @book.author %></p>
+    <p>Genre: <%= @book.genre %></p>
+    <p>Uploader: <%= @book.user.first_name %> <%= @book.user.last_name %></p>
+  </div>
+  <br>
+  <div class="btn-request">
+    <%= simple_form_for [@book, @request] do |f| %>
+    <%= f.submit "Swap", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 
-<%# <%# when form is working render on new and edit.html %>
-<%= simple_form_for [@book, @request] do |f| %>
-<%= f.submit %>
-<% end %>
+  <%# added link to see users reviews %>
+  <%#= link_to "See the reviews", own_user_reviews_path(:user_id)  %>
+  <div class="reviews">
+    <p>Reviews</p>
+    <% unless @reviews.nil? %>
+    <% @reviews.each do |review| %>
+    <p><%= review %></p>
+    <% end %>
+    <% end %>
+  </div>
+  <br>
 
-<%# <%= link_to "Request book", book_requests_path(user_id: current_user, book_id: @book), data: {turbo_method: :post} %> %>
-<%# added link to go back to books%>
-<%= link_to "Back to Books", books_path %>
+  <%# <%# when form is working render on new and edit.html %>
+
+  <%# <%= link_to "Request book", book_requests_path(user_id: current_user, book_id: @book), data: {turbo_method: :post} %> %>
+  <%# added link to go back to books%>
+</div>
