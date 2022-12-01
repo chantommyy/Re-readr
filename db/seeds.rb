@@ -14,29 +14,29 @@ Book.destroy_all
 User.destroy_all
 # the faker name gives out a first name and last name, so i split it to only give first or last name
 tommy = User.create!(
-  first_name: Faker::Name.name.split[0],
-  last_name: Faker::Name.name.split[1],
+  first_name: 'Tommy',
+  last_name: 'Chan',
   email: "tommy@gmail.com",
   password: "123456"
 )
 
 max = User.create!(
-  first_name: Faker::Name.name.split[0],
-  last_name: Faker::Name.name.split[1],
+  first_name: 'Maxime',
+  last_name: 'Sidonio',
   email: "max@gmail.com",
   password: "123456"
 )
 
 saida = User.create!(
-  first_name: Faker::Name.name.split[0],
-  last_name: Faker::Name.name.split[1],
+  first_name: 'Saida',
+  last_name: 'Murtazali',
   email: "saida@gmail.com",
   password: "123456"
 )
 
 dylan = User.create!(
-  first_name: Faker::Name.name.split[0],
-  last_name: Faker::Name.name.split[1],
+  first_name: 'Dylan',
+  last_name: 'Deehan',
   email: "dylan@gmail.com",
   password: "123456"
 )
