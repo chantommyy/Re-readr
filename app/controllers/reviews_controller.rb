@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
 
-  def index
-    @reviews = User.review.all
-  end
+  # def index
+  #   @reviews = User.review.all
+  # end
   def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
@@ -14,12 +14,16 @@ class ReviewsController < ApplicationController
   end
 
   def new
-    @review = Review.find(params[:user_id])
+    # @review = Review.find(params[:user_id])
     @review = Review.new
   end
 
   def index
     @reviews = Review.all
+  end
+  # <%# index is currently showing reviews for every book, i have tried to make a custom method "reviews#own" that is nested to only show reviews for the :id, eg the review where :id=1 %>
+  def own
+    @reviews = Review.where(user_id: current_user)
   end
 
   private

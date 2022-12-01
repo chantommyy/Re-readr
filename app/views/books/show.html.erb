@@ -1,2 +1,10 @@
 <h1>book</h1>
 <%= @book.name %>
+<br>
+<%= @book.user.first_name %> <%= @book.user.last_name %>
+<%# added link to see users reviews %>
+<%= link_to "See there reviews", own_user_reviews_path(:user_id)  %>
+<p>Reviews</p>
+<br>
+<%# added link to go back to books%>
+<%= link_to "Back to Books", books_path %>
