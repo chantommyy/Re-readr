@@ -49,7 +49,7 @@ books = repos["books"]
 
 books.first(15).each do |book|
   # p book["subjects"][0]
-  if book.key?("subjects")
+  if book.key?("subjects") && book.key?("synopsis")
     Book.create!(
       name: book["title"],
       author: book["authors"],

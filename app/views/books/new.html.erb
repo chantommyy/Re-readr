@@ -1,4 +1,17 @@
 <%# <%# when form is working render on new and edit.html %>
-<h1>Add Book</h1>
-<%# <%= render "form", review: @review  %> %>
-<%= @book %>
+<div class="container">
+  <div class="row">
+    <h1>Add a book</h1>
+      <div class="text-left form-login fs-3">
+        <%= simple_form_for(@book, defaults: { input_html: { class: "mb-3"}}) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :barcode, as: :string %>
+          <%= f.input :description %>
+          <%= f.input :genre %>
+          <%= f.input :author %>
+          <%= f.input :condition %>
+          <%= f.submit "Add", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+  </div>
+</div>
