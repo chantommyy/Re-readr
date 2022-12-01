@@ -1,6 +1,5 @@
 <%# <%# when form is working render on new and edit.html %>
-<h1>Add Book</h1>
-<%= simple_form_for(book) do |f| %>
+<%= simple_form_for(@book) do |f| %>
 <%= f.label :name  %>
 <%= f.text_field :name %>
 <%= f.label :genre %>
