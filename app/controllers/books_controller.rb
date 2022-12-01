@@ -32,9 +32,9 @@ class BooksController < ApplicationController
     end
   end
 
-  # def get_book_info(barcode)
-
-  # end
+  def get_book_info(barcode)
+    
+  end
 
     # @book = Book.create(book_params)
 
