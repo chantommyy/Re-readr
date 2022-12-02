@@ -1,8 +1,9 @@
-<div class="hero">
-  <div class="container d-flex flex-column align-items-center justify-content-center">
-    <h1 class="logo">Re:reader</h1>
-    <h4 class="slogan">Find the book you're looking for</h4>
+<div class="landing">
+  <div class="container d-flex flex-column justify-content-center align-items" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1542948338-ded3dbb75080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80);">
+    <%= image_tag "rereadr.png", class: "img-logo" %>
+    <h1 class="logo">re:readr</h1>
+    <h4 class="slogan">Browse nearby books and swipe up <br> the books you like</h4>
     <br>
-    <%= link_to "Turn the page", books_path, class: "btn btn-success text-white fw-bold fs-4 rounded-pill p-3" %>
+    <%= link_to "Turn the page", books_path, class: "btn btn-green text-white fs-5 p-3" %>
   </div>
 </div>

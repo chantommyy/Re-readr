@@ -1,43 +1,56 @@
 // Specific CSS for your home-page
-.hero {
-  background-image: url("https://images.unsplash.com/photo-1542948338-ded3dbb75080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-  display: block;
-  float: left;
+.landing {
+  height: 844px;
+  width: 390px;
   border-top: 0;
   // vertical-align: bottom;
 }
 
 .container {
-  height: 100%;
-  width: 100%;
-  // display: block;
-  // display: inline-block;
-  // float: left;
-}
-
-.logo{
-    font-family: "Pacifico", "cursive";
-    font-size: 72px;
+  .logo{
+    font-family: $headers-font;
+    font-weight: 200;
+    font-size: 45px;
+    text-align: center;
     color: white;
     text-align: center;
-    text-shadow: 1px 1px 2px rgb(62, 62, 62);
     margin-top: -150px;
+    width: 100%;
   }
-
-
-.slogan{
-  color:white;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 1px 1px 2px rgb(62, 62, 62);
-  margin: 24px 0;
+  .img-logo{
+    margin-bottom: 130px;
+    width: 250px;
+    padding-left: 110px;
+  }
+  .slogan{
+    color:white;
+    text-align: center;
+    font-size: 17px;
+    margin: 10px 0;
+    font-weight: 200;
+  }
+  .btn-green{
+    background-color: #4F7D75;
+    font-family: "Poppins";
+    border-radius: 15px;
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    width: 100%;
+    font-weight: 200;
+  }
+  .btn-green:hover{
+    background-color: #253d39;
+  }
+  height: 100%;
+  width: 100%;
+  margin-top: -30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-body.homepage #navigation-top {
-  display: none !important;
- }
+
+
+// body.homepage #navigation-top {
+//   display: none !important;
+//  }
