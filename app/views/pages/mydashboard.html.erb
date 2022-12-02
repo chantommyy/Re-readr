@@ -1,10 +1,13 @@
+<br>
 <div class="container">
-<h1>My dashboard</h1>
+<div class=title ><h1>My dashboard</h1></div>
+<br>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
       <li>
         <p> Book requested: <%= request.book.name %></p>
         <p> Who wants your book: <%= request.user.first_name %></p>
+        <%= link_to "Check his/her profile", request_user_path(request, request.user), class: 'button' %>
         <hr>
       </li>
     <% end %>

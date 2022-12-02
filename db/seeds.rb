@@ -60,3 +60,45 @@ books.first(15).each do |book|
   end
   puts "#{book["title"]} created"
 end
+
+books.first(15).each do |book|
+  # p book["subjects"][0]
+  if book.key?("subjects") && book.key?("synopsis")
+    Book.create!(
+      name: book["title"],
+      author: book["authors"],
+      photo: book["image"],
+      genre: book["subjects"][0],
+      user_id: dylan.id
+  )
+  end
+  puts "#{book["title"]} created"
+end
+
+books.first(15).each do |book|
+  # p book["subjects"][0]
+  if book.key?("subjects") && book.key?("synopsis")
+    Book.create!(
+      name: book["title"],
+      author: book["authors"],
+      photo: book["image"],
+      genre: book["subjects"][0],
+      user_id: max.id
+  )
+  end
+  puts "#{book["title"]} created"
+end
+
+books.first(15).each do |book|
+  # p book["subjects"][0]
+  if book.key?("subjects") && book.key?("synopsis")
+    Book.create!(
+      name: book["title"],
+      author: book["authors"],
+      photo: book["image"],
+      genre: book["subjects"][0],
+      user_id: tommy.id
+  )
+  end
+  puts "#{book["title"]} created"
+end
