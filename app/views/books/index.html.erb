@@ -1,18 +1,17 @@
 <div class="container">
-  <h1>Books</h1>
   <% @books.each do |book| %>
-    <div class="card-trip">
+    <div class="card-book">
       <%= link_to book_path(book) do %>
-        <img src="<%= book.photo %>" alt="book cover">
+        <img src="<%= book.photo %>" alt="book cover" class="cover">
       <% end %>
-      <div class="card-trip-infos">
+      <div class="card-book-infos">
         <div>
-          <h2><%= book.name %></h2>
-          <p><%= book.author %></p>
-          <p><%= book.genre %></p>
+          <h2><%= book.name[0,30] %></h2>
+          <p>Author: <%= book.author.gsub('["',' ') %></p>
+          <p>Subject: <%= book.genre %></p>
         </div>
-        <h2 class="card-trip-pricing"><%= book.barcode %></h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <h2 class="card-book-pricing"><%=  %></h2>
+          <%= image_tag "user.png", class: "card-book-user avatar-bordered" %>
       </div>
     </div>
   <% end %>
