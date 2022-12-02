@@ -1,3 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%# added link to books %>
+<div class="hero">
+  <div class="container d-flex flex-column align-items-center justify-content-center">
+    <h1 class="logo">Re:reader</h1>
+    <h4 class="slogan">Find the book you're looking for</h4>
+    <br>
+    <%= link_to "Turn the page", books_path, class: "btn btn-success text-white fw-bold fs-4 rounded-pill p-3" %>
+  </div>
+</div>

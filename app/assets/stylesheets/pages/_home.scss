@@ -1,21 +1,43 @@
 // Specific CSS for your home-page
-.html {
-  position: relative;
-  min-height: 100%;
-}
-.body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  position: relative;
-  width: 390px;
-  height: 844px;
-  background: #FCF7F1;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  /* Set the fixed height of the footer here */
-  height: 60px;
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1542948338-ded3dbb75080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
   width: 100%;
-  background-color: #CCC;
+  display: block;
+  float: left;
+  border-top: 0;
+  // vertical-align: bottom;
 }
+
+.container {
+  height: 100%;
+  width: 100%;
+  // display: block;
+  // display: inline-block;
+  // float: left;
+}
+
+.logo{
+    font-family: "Pacifico", "cursive";
+    font-size: 72px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(62, 62, 62);
+    margin-top: -150px;
+  }
+
+
+.slogan{
+  color:white;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgb(62, 62, 62);
+  margin: 24px 0;
+}
+
+body.homepage #navigation-top {
+  display: none !important;
+ }
