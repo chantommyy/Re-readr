@@ -14,9 +14,11 @@
     <%= f.submit "Swap", class: "btn btn-primary" %>
     <% end %>
   </div>
-
-  <%# added link to see users reviews %>
-  <%#= link_to "See the reviews", own_user_reviews_path(:user_id)  %>
+<% if @request %>
+  <%# <%= link_to "See there profile", request_user_path(request_id: 10, user: 3) %> %>
+  <%= link_to "See there profile", request_user_path(request_id: 1, user: 3) %>
+  
+<% end %>
   <div class="reviews">
     <p>Reviews</p>
     <% unless @reviews.nil? %>
@@ -26,10 +28,5 @@
     <% end %>
   </div>
   <br>
-
-  <%# <%# when form is working render on new and edit.html %>
-
-  <%# <%= link_to "Request book", book_requests_path(user_id: current_user, book_id: @book), data: {turbo_method: :post} %> %>
-  <%# added link to go back to books%>
 </div>
   
