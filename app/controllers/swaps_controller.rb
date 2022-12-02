@@ -1,5 +1,4 @@
 class SwapsController < ApplicationController
-end
-
-def show
+  def show
+  end
 end
