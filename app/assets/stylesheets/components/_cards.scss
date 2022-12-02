@@ -1,40 +1,48 @@
-.card-trip {
+.card-book{
+  .cover{
+    height: 200px;
+    width: 100%;
+    object-fit: fill;
+    justify-content: center;
+    margin: 20px auto 20px auto;
+    padding: 0 105px 0 105px;
+  }
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 30px 5px 20px 5px;
+  border-radius: 30px;
 }
-
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit:fill;
+.logo{
+  width: 70px;
+  justify-content: center;
 }
-
-.card-trip h2 {
+.card-book h2{
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
-
-.card-trip p {
+.card-book p{
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
-
-
-.card-trip .card-trip-infos {
+.card-book .card-book-infos{
   padding: 16px;
   display: flex;
   justify-content: space-between;
+  border-radius: 20px;
+  background-color: #FCF7F1;
+  font-family: "Poppins";
+  color: rgb(62, 62, 62);
   align-items: flex-end;
   position: relative;
 }
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.card-book-infos{
+  .card-book-user{
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    width: 40px;
+  }
 }
