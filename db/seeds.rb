@@ -10,8 +10,8 @@ require 'faker'
 require "json"
 require "rest-client"
 
-Book.destroy_all
 User.destroy_all
+Book.destroy_all
 # the faker name gives out a first name and last name, so i split it to only give first or last name
 tommy = User.create!(
   first_name: 'Tommy',
@@ -52,7 +52,7 @@ books.first(15).each do |book|
   if book.key?("subjects") && book.key?("synopsis")
     Book.create!(
       name: book["title"],
-      author: book["authors"],
+      author: book["authors"][0],
       photo: book["image"],
       genre: book["subjects"][0],
       user_id: saida.id
