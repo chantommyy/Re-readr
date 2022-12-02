@@ -10,8 +10,8 @@ require 'faker'
 require "json"
 require "rest-client"
 
-User.destroy_all
 Book.destroy_all
+User.destroy_all
 # the faker name gives out a first name and last name, so i split it to only give first or last name
 tommy = User.create!(
   first_name: 'Tommy',
