@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_094951) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "barcode"
     t.string "description"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
