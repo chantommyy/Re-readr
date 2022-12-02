@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%= @book.name[0,30] %></h1>
   <%= link_to "Back to Books", books_path %>
-  
+
   <div class="book-info">
     <img src="<%= @book.photo %>" alt="book cover">
     <p>Author: <%= @book.author %></p>
@@ -32,3 +32,4 @@
   <%# <%= link_to "Request book", book_requests_path(user_id: current_user, book_id: @book), data: {turbo_method: :post} %> %>
   <%# added link to go back to books%>
 </div>
+  

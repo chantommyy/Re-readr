@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_01_094951) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_02_122844) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_094951) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "barcode"
+    t.integer "barcode"
     t.string "description"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
@@ -43,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_094951) do
     t.datetime "updated_at", null: false
     t.integer "rating"
     t.string "comment"
+    t.bigint "reviewee_id"
+    t.index ["reviewee_id"], name: "index_reviews_on_reviewee_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -75,6 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_094951) do
   add_foreign_key "requests", "books"
   add_foreign_key "requests", "users"
   add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "users", column: "reviewee_id"
   add_foreign_key "swaps", "books"
   add_foreign_key "swaps", "requests"
 end
