@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-
+  before_action :set_review, only: [:show, :edit, :update, :destroy, :new]
   def show
     @review = Review.find(params[:user_id])
   end
@@ -9,23 +9,30 @@ class ReviewsController < ApplicationController
     @reviews = Review.where(user_id: @user.id)
   end
 
-
+  
   def new
-    @review = Review.new
   end
 
   def create
     @review = Review.new(review_params)
-    if @review.save
-      redirect_to user_reviews_path(@user, :reviews)
+    @review.user = current_user
+    @user = User.find(params[:user_id])
+    @review.reviewee = @user
+    if @review.save!
+      redirect_to user_path(@user)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+
   private
+  def set_review
+    @user = User.find(params[:user_id])
+  end
 
   def review_params
-    params.require(:review).permit(:rating, :comment, :user_id)
+    params.require(:review).permit(:rating, :comment)
   end
+
 end

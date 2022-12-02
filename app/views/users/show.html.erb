@@ -1,8 +1,18 @@
-<h1><%= @user.first_name + " " + @user.last_name %></h1>
+<h1><%= @user.first_name %> <%= @user.last_name %></h1>
 <ul>
-  <%= @user.reviews.each do |review| %>
+  <% @reviews.each do |review| %>
     <li>
-      <p><%= review %></p>
+      <p><%= review.comment %></p>
+      <p><%= review.rating %></p>
     </li>
   <% end %>
 </ul>
+
+<h2> Add a review </h2> %>
+<%=  simple_form_for [@user, @review] do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.submit "Submit review" %>
+<% end %>
+
+

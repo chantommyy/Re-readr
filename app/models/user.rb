@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :books
   has_many :requests
-  has_many :reviews
   has_many :requests_as_owner, through: :books, source: :requests
+  validates :first_name, presence: true
+  validates :last_name, presence: true 
 end
