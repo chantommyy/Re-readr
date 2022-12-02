@@ -1,4 +1,7 @@
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+<% @books.each do |book| %>
+  <p> <%= book.name %> </p><br  >
+<%end  %>
 <ul>
   <% @user.books.each do |book| %>
     <li><%= book.name %></li>
@@ -13,9 +16,11 @@
   <% end %>
 </ul>
 
-<h2> Add a review </h2>
-<%#=  simple_form_for [@user, @review] do |f| %>
-  <%#= f.input :rating %>
-  <%#= f.input :comment %>
-  <%#= f.submit "Submit review" %>
-<%# end %>
+
+#<h2> Add a review </h2> %>
+#<%=  simple_form_for [@request, @user, @review] do |f| %>
+ # <%= f.input :rating %>
+  #<%= f.input :comment %>
+ # <%= f.submit "Submit review" %>
+#<% end %>
+

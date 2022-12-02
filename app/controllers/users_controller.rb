@@ -4,8 +4,10 @@ class UsersController < ApplicationController
   def show
     # @reviews = @user.reviews
     @user = User.find(params[:id])
+    @request = Request.find(params[:request_id])
     @reviews =  Review.where(reviewee: @user)
     @review = Review.new
+    @books = Book.where(user_id: @user)
   end
 
 
