@@ -1,12 +1,19 @@
-<%# <%# when form is working render on new and edit.html %>
-<div class="container">
-  <div class="row">
-    <h1>Add a book</h1>
-      <div>
+
+<div class="new-product-form">
+  <div class = "container devise-card" id="productForm">
+    <div class = 'container-relative' >
+      class="img rounded-4 cover" alt="..." >
+      <div class="text-box">
+        <h2>Add new book</h2>
+      </div>
+    </div>
+
+<div id="inputFields">
         <%= simple_form_for @book do |f| %>
           <%= f.input :barcode, as: :string, class: "form-control" %>
-          <%= f.submit "Add", class: "btn btn-primary" %>
+          <br>
+          <div class="form-actions btn-container">
+          <%= f.submit "Add", class: "btn btn-light" %>
+          </div>
         <% end %>
-      </div>
-  </div>
 </div>
