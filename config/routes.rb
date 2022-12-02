@@ -10,11 +10,12 @@ Rails.application.routes.draw do
   resources :books do
     resources :requests, only: [:create]
   end
-  resources :users, only: :show do
-    resources :reviews, only: [:new, :create]
+  resources :requests, except: :create do
+    resources :users, only: :show do
+      resources :swaps, only: [:create]
+      resources :reviews, only: [:new, :create]
+    end
   end
-  resources :requests do
-    resources :swaps, only: [:show]
-  end
+
 
 end

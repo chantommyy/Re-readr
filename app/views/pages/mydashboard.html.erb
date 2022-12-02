@@ -1,12 +1,12 @@
+<div class="container">
 <h1>My dashboard</h1>
-
-<ul>
-  <% current_user.requests_as_owner.each do |request| %>
-    <li>
-      <p> Book requested: <%= request.book.name %></p>
-      <p> Who wants your book: <%= request.user.first_name %></p>
-      <hr>
-    </li>
-  <% end %>
-</ul>
-
+  <ul>
+    <% current_user.requests_as_owner.each do |request| %>
+      <li>
+        <p> Book requested: <%= request.book.name %></p>
+        <p> Who wants your book: <%= request.user.first_name %></p>
+        <hr>
+      </li>
+    <% end %>
+  </ul>
+</div>
