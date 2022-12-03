@@ -9,7 +9,6 @@ class ReviewsController < ApplicationController
     @reviews = Review.where(user_id: @user.id)
   end
 
-  
   def new
   end
 

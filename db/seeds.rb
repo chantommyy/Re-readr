@@ -53,9 +53,9 @@ books.first(15).each do |book|
   if book.key?("subjects") && book.key?("synopsis")
     Book.create!(
       name: book["title"],
-      author: book["authors"][0],
+      author: book["authors"][0].gsub(/[^0-9a-z ]/i, ''),
       photo: book["image"],
-      genre: book["subjects"][0],
+      genre: book["subjects"][0].gsub("--", " and "),
       user_id: saida.id
   )
   end
@@ -67,9 +67,9 @@ books.first(15).each do |book|
   if book.key?("subjects") && book.key?("synopsis")
     Book.create!(
       name: book["title"],
-      author: book["authors"],
+      author: book["authors"][0].gsub(/[^0-9a-z ]/i, ''),
       photo: book["image"],
-      genre: book["subjects"][0],
+      genre: book["subjects"][0].gsub("--", " and "),
       user_id: dylan.id
   )
   end
@@ -81,9 +81,9 @@ books.first(15).each do |book|
   if book.key?("subjects") && book.key?("synopsis")
     Book.create!(
       name: book["title"],
-      author: book["authors"],
+      author: book["authors"][0].gsub(/[^0-9a-z ]/i, ''),
       photo: book["image"],
-      genre: book["subjects"][0],
+      genre: book["subjects"][0].gsub("--", " and "),
       user_id: max.id
   )
   end
@@ -95,9 +95,9 @@ books.first(15).each do |book|
   if book.key?("subjects") && book.key?("synopsis")
     Book.create!(
       name: book["title"],
-      author: book["authors"],
+      author: book["authors"][0].gsub(/[^0-9a-z ]/i, ''),
       photo: book["image"],
-      genre: book["subjects"][0],
+      genre: book["subjects"][0].gsub("--", " and "),
       user_id: tommy.id
   )
   end
