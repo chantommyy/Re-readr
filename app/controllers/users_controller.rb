@@ -10,7 +10,6 @@ class UsersController < ApplicationController
     @books = Book.where(user_id: @user)
   end
 
-
   private
 
   def review_params
@@ -18,7 +17,3 @@ class UsersController < ApplicationController
   end
 
 end
-
-
-
-
