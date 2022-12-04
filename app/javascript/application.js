@@ -3,6 +3,7 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
