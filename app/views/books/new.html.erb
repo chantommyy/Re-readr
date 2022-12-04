@@ -1,18 +1,7 @@
-
-<div class="new-product-form">
-  <div class = "container devise-card" id="productForm">
-    <div class = 'container-relative'>
-      <div class="text-box">
-        <h2>Add new book</h2>
-      </div>
-    </div>
-
-<div id="inputFields">
-        <%= simple_form_for @book do |f| %>
-          <%= f.input :barcode, as: :string, class: "form-control" %>
-          <br>
-          <div class="form-actions btn-container">
-          <%= f.submit "Add", class: "btn btn-primary" %>
-          </div>
-        <% end %>
+<div class="bg text-center">
+  <div class="barcode">
+    <h2>Add a new book</h2>
+    <p class="secondLine">Enter the ISBN code of the book to display the information on the platform.<br>The barcode should be 10 or 13 characters long.</p>
+    <p> <input class="InputStyle" placeholder="ISBN" style="font-family:Poppins" type="text"> </p>
+  </div>
 </div>
