@@ -17,7 +17,7 @@
   </div>
 <% if @request %>
   <%# <%= link_to "See there profile", request_user_path(request_id: 10, user: 3) %>
-  <%= link_to "See there profile", request_user_path(request_id: 1, user: 3) %>
+  <%= link_to "See there profile", request_user_path(:request_id, :user) %>
 
 <% end %>
   <div class="reviews">
