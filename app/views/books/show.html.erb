@@ -4,8 +4,9 @@
 
   <div class="book-info">
     <img src="<%= @book.photo %>" alt="book cover">
-    <p>Author: <%= @book.author.gsub('["',' ') %></p>
-    <p>Genre: <%= @book.genre %></p>
+    <p>Author: <%= @book.author[0].gsub(/[^0-9a-z ]/i, '') %></p>
+    <p>Genre: <%= @book.genre.gsub("--", " and ") %></p>
+    <p>Genre: <%= @book.description %></p>
     <p>Uploader: <%= @book.user.first_name %> <%= @book.user.last_name %></p>
   </div>
   <br>
@@ -16,7 +17,7 @@
   </div>
 <% if @request %>
   <%# <%= link_to "See there profile", request_user_path(request_id: 10, user: 3) %>
-  <%= link_to "See there profile", request_user_path(request_id: 1, user: 3) %>
+  <%= link_to "See there profile", request_user_path(:request_id, :user) %>
 
 <% end %>
   <div class="reviews">
