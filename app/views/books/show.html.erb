@@ -10,11 +10,15 @@
     <p>Uploader: <%= @book.user.first_name %> <%= @book.user.last_name %></p>
   </div>
   <br>
-  <div class="btn-request">
-    <%= simple_form_for [@book, @request] do |f| %>
-    <%= f.submit "Swap", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+  <% if @book.user != current_user %>
+    <div class="btn-request">
+      <%= simple_form_for [@book, @request] do |f| %>
+      <%= f.submit "Swap", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  <% else %>
+  <h1>You own this book.</h1>
+  <% end %>
 <% if @request %>
   <%# <%= link_to "See there profile", request_user_path(request_id: 10, user: 3) %>
   <%= link_to "See there profile", request_user_path(:request_id, :user) %>

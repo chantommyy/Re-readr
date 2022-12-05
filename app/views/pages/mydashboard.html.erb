@@ -2,6 +2,7 @@
 <div class="container">
   <div class=title>My dashboard</div>
   <br>
+  <h2>My swaps: </h2>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
       <li>
@@ -14,6 +15,15 @@
         <%# <%= link_to "X", mydashboard_path, class: 'button' %>
         <hr>
       </li>
+    <% end %>
+  </ul>
+  <h2>Pending requests: </h2>
+  <ul>
+    <% current_user.requests.each do |request| %>
+    <li>
+      Book: <%= request.book.name.first(30) %> Requested to <%= request.book.user.first_name %>
+
+    </li>
     <% end %>
   </ul>
   </div>
