@@ -1,4 +1,8 @@
 <div class="container">
+<div class="title">
+  <h1>Books to swap:</h1>
+  <p></p>
+</div>
   <% @books.each do |book| %>
     <div class="card-book">
       <%= link_to book_path(book) do %>
@@ -6,7 +10,7 @@
       <% end %>
       <div class="card-book-infos">
         <div>
-          <h2><%= book.name[0,30] %></h2>
+          <h2><%= book.name %></h2>
           <p>Author: <%= book.author %></p>
           <p>Subject: <%= book.genre %></p>
         </div>
