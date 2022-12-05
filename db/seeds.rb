@@ -184,3 +184,88 @@ Book.create(name: 'The illness Lesson',
   user_id:  tommy.id,
   photo:'https://img.buzzfeed.com/buzzfeed-static/static/2020-12/21/1/asset/6583d86d6f96/sub-buzz-7640-1608513353-20.jpg'
   )
+
+# ------------10------------ #
+
+
+Book.create(name: 'Small Pleasures',
+  genre: 'Thriller',
+  description: 'A novel of unexpected second chances set in 1950s England.',
+  author: 'Clare Chambers',
+  user_id:  saida.id,
+  photo:'https://m.media-amazon.com/images/I/51fxYLHkwCL.jpg'
+  )
+
+Book.create(name: 'Frankenstein: Or, the Modern Prometheus',
+  genre: 'Thriller',
+  description: 'Shelleys novel, Frankenstein: or, the Modern Prometheus (1818), is a combination of Gothic horror story and science fiction. The book tells the story of Victor Frankenstein, a Swiss student of natural science who creates an artificial man from pieces of corpses and brings his creature to life',
+  author: 'Mary Shelley',
+  user_id:  saida.id,
+  photo:'https://m.media-amazon.com/images/I/81Y4bqxd96L.jpg'
+  )
+
+Book.create(name: 'The Secret Garden',
+  genre: 'Romance',
+  description: 'After losing her parents, young Mary Lennox is sent from India to live in her uncles gloomy mansion on the wild English moors. She is lonely and has no one to play with, but one day she learns of a secret garden somewhere in the grounds that no one is allowed to enter.',
+  author: 'Frances Hodgson Burnett',
+  user_id:  dylan.id,
+  photo:'https://m.media-amazon.com/images/I/911NSeJbGxL.jpg'
+  )
+
+Book.create(name: 'Attack on Titan 01',
+  genre: 'Manga',
+  description: 'For the past century, whats left of man has hidden in a giant, three-walled city. People believe their 50-meter-high walls will protect them from the Titans, but the sudden appearance of an immense Titan is about to change everything.',
+  author: 'Hajime Isayama',
+  user_id:  max.id,
+  photo:'https://m.media-amazon.com/images/I/81DmqnYchWL.jpg'
+  )
+
+Book.create(name: 'Easy French Phrase Book',
+  genre: 'Manga',
+  description: 'Over 1500 Common Phrases For Everyday Use And Travel',
+  author: 'Lingo Mastery',
+  user_id:  max.id,
+  photo:'https://m.media-amazon.com/images/I/71xTKK68pLL.jpg'
+  )
+
+Book.create(name: 'Bored of Lunch: The Healthy Slow Cooker Book',
+  genre: 'Recipes',
+  description: 'Nathan Anthony, the home cook with over 1.2million followers, shares delicious and easy home-style recipes that can all be made in your slow cooker while you get on with your day.',
+  author: 'Nathan Anthony ',
+  user_id:  saida.id,
+  photo:'https://m.media-amazon.com/images/I/81qsXzWsZcL.jpg'
+  )
+
+Book.create(name: 'Pride and Prejudice',
+  genre: 'Romance',
+  description: 'Pride and Prejudice follows the turbulent relationship between Elizabeth Bennet, the daughter of a country gentleman, and Fitzwilliam Darcy, a rich aristocratic landowner. They must overcome the titular sins of pride and prejudice in order to fall in love and marry.',
+  author: 'Jane Austen',
+  user_id:  saida.id,
+  photo:'https://m.media-amazon.com/images/I/81fygAyvKML.jpg'
+  )
+
+Book.create(name: 'The Wind in the Willows',
+  genre: 'Romance',
+  description: 'The Wind in the Willows is a childrens novel by the British novelist Kenneth Grahame, first published in 1908. It details the story of Mole, Ratty, and Badger as they try to help Mr. Toad, after he becomes obsessed with a motorcar and gets into trouble.',
+  author: 'Kenneth Grahame',
+  user_id:  max.id,
+  photo:'https://m.media-amazon.com/images/I/811tXAUQdsL.jpg'
+  )
+
+Book.create(name: 'Sapiens',
+  genre: 'Romance',
+  description: 'Yuval Noah Hararis book, Sapiens traces the origins, mechanisms, and effects of what we think of as “human progress” from small bands of hunter-gatherers 100,000 years ago to the present-day global network through which our species has come to dominate the entire Earth',
+  author: 'Yuval Noah Harari',
+  user_id:  max.id,
+  photo:'https://m.media-amazon.com/images/I/713jIoMO3UL.jpg'
+  )
+
+Book.create(name: 'Never Let Me Go',
+  genre: 'Romance',
+  description: 'Never Let Me Go takes place in a dystopian version of late 1990s England, where the lives of ordinary citizens are prolonged through a state-sanctioned program of human cloning. The clones, referred to as students, grow up in special institutions away from the outside world.',
+  author: 'Kazuo Ishiguro',
+  user_id:  max.id,
+  photo:'https://m.media-amazon.com/images/I/716qHj8vH7L.jpg'
+  )
+
+# ------------20------------
