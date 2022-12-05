@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
-    @books = Book.all
+    @books = Book.all.reverse
   end
 
   def show
@@ -50,8 +50,8 @@ class BooksController < ApplicationController
   #     render :new, status: :unrprocessable_entity
   # end
 
-  def edit
-  end
+  # def edit
+  # end
 
   def update
     @book.update(book_params)
