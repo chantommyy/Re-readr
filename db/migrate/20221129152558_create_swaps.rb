@@ -4,7 +4,7 @@ class CreateSwaps < ActiveRecord::Migration[7.0]
       t.references :request, null: false, foreign_key: true
       t.references :book, null: false, foreign_key: true
       t.boolean :status
-
+      t.references :user, null: false, foreign_key: true
       t.timestamps
     end
   end
