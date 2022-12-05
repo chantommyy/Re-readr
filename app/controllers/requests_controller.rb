@@ -17,6 +17,15 @@ class RequestsController < ApplicationController
     end
   end
 
+  # def destroy
+  #   @request = request.find(params[:id])
+  #   @request.destroy
+  #   redirect_to mydashboard_path(@request), status: :see_other
+  # end
+
+
+
+
   private
 
   def request_params

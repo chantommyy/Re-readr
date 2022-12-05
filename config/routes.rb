@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :requests, except: :create do
     resources :users, only: :show do
       resources :swaps, only: [:create]
-      resources :reviews, only: [:new, :create]
+      resources :reviews, only: [:new, :create, :destroy]
     end
   end
 

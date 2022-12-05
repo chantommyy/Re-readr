@@ -2,23 +2,30 @@
 <h2>My Books</h2>
 <ul>
   <% @user.books.each do |book| %>
+  <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
     <li><%= book.name %></li>
+    <%= hidden_field_tag "book_id", book.id %>
+  <% end %>
   <% end %>
 </ul>
-<ul>
 <%= link_to "home", root_path %>
-  <%# <% @reviews.each do |review| %>
-    <%# <li> %>
-      <%# <p><%= review.comment %>
-      <%# <p><%= review.rating %>
-    <%# </li> %>
-  <%# <% end %>
-<%# </ul> %>
+  <div>
+  <ul>
+    <% @reviews.each do |review| %>
+      <li>
+        <p><%= review.comment %></p>
+        <p><%= review.rating %></p>
+      </li>
+    <% end %>
+  </ul>
+  </div>
 
 
-<%# #<h2> Add a review </h2> %>
-<%# #<%=  simple_form_for [@request, @user, @review] do |f| %>
- <%# # <%= f.input :rating %>
-  <%# #<%= f.input :comment %>
- <%# # <%= f.submit "Submit review" %>
-<%# #<% end %>
+<h2> Add a review </h2>
+<%=  simple_form_for ([@request, @user, @review]) do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.submit "Submit review", data: { turbo_method: :post } %>
+<% end %>
+
+<br>

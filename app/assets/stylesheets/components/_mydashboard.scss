@@ -1,6 +1,16 @@
 .container {
   .title {
     text-align: center;
-    font-family: "Poppins";
+    font-size: x-large;
+    font-family: cursive;
+  }
+  .button {
+      color: white;
+      padding: 8px 24px;
+      border-radius: 4px;
+      background: #046e49;
+      transition: background 0.3s ease;
+      text-decoration: none;
   }
 }
+

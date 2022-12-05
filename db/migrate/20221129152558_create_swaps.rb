@@ -3,8 +3,8 @@ class CreateSwaps < ActiveRecord::Migration[7.0]
     create_table :swaps do |t|
       t.references :request, null: false, foreign_key: true
       t.references :book, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
       t.boolean :status
-
       t.timestamps
     end
   end
