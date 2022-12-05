@@ -2,7 +2,7 @@
 <div class="container">
   <div class=title>My dashboard</div>
   <br>
-  <h2>My swaps: </h2>
+  <h3>My swaps: </h3>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
       <li>
@@ -17,7 +17,7 @@
       </li>
     <% end %>
   </ul>
-  <h2>Pending requests: </h2>
+<h3>Pending requests: </h3>
   <ul>
     <% current_user.requests.each do |request| %>
     <li>
