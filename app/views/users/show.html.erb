@@ -60,10 +60,14 @@
       <h3>My Books</h3>
       <ul>
         <% @user.books.each do |book| %>
-          <li><%= book.name %></li>
-        <% end %>
+         <li><%= book.name %></li>
+          <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
+          <%= hidden_field_tag "book_id", book.id %>
+          <% end %>
+      <% end %>
       </ul>
       <%= link_to "home", root_path %>
+</div>
   </div>
 
 
@@ -88,7 +92,6 @@
       <%= f.submit "Submit review", data: { turbo_method: :post } %>
     <% end %>
 
-    <br>
 
   </div>
 

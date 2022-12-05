@@ -1,29 +1,18 @@
-<div class='wrapper'>
-  <div class='bottom'>
-    <p>
-      No more books!
-    </p>
-  </div>
-
-    <% @books.each do |book| %>
-      <input type='checkbox' checked />
-        <article>
-        <div class="card-book">
-          <%= link_to book_path(book) do %>
-            <img src="<%= book.photo %>" alt="book cover" class="cover">
-          <% end %>
-          <div class="card-book-infos">
-            <div>
-              <h2><%= book.name[0,30] %></h2>
-              <p>Author: <%= book.author[0].gsub(/[^0-9a-z ]/i, ' ') %></p>
-              <p>Subject: <%= book.genre.gsub("--", " and ") %></p>
-            </div>
-            <h2 class="card-book-barcode"><%=  %></h2>
-            <%= image_tag "user.png", class: "card-book-user avatar-bordered" %>
-          </div>
-        </article>
-    <% end %>
-
-  <div id='next-btn'>Next</div>
-
+<div class="container">
+  <% @books.each do |book| %>
+    <div class="card-book">
+      <%= link_to book_path(book) do %>
+        <img src="<%= book.photo %>" alt="book cover" class="cover">
+      <% end %>
+      <div class="card-book-infos">
+        <div>
+          <h2><%= book.name %></h2>
+          <p>Author: <%= book.author %></p>
+          <p>Subject: <%= book.genre %></p>
+        </div>
+        <h2 class="card-book-pricing"><%=  %></h2>
+          <%= image_tag "user.png", class: "card-book-user avatar-bordered" %>
+      </div>
+    </div>
+  <% end %>
 </div>

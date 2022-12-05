@@ -34,7 +34,6 @@ input,input::-webkit-input-placeholder {
 .social-btn{
   position: absolute;
   bottom: 20px;
-  left: 47%;
 }
 
 i{
@@ -54,13 +53,21 @@ input, input:focus{
 .secondLine{
   font-weight: 350;
   font-size:15px;
-  margin-bottom: 15%;
+  margin-bottom: 5%;
   color: rgb(41, 41, 41);
 }
 
 .firstLine{
   font-size: 30px;
   color: rgb(43, 43, 43);
+}
+
+.btn-flat{
+  width: 161px;
+  height: 40px;
+  background-color: #4F7D75;
+  color: white;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 600px) {

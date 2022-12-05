@@ -3,6 +3,7 @@
   <head>
     <title>Re:readr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,5 +17,7 @@
     <%= render "shared/flashes" %>
 
     <%= yield %>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </body>
 </html>

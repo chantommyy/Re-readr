@@ -1,137 +1,56 @@
-*{ box-sizing: border-box; }
-html, body{ height: 100%; margin: 0; }
-body{
-  // display: flex;
-  background: #eee;
-  color: #212121;
+
+.card-book{
+  overflow: hidden;
+  background: rgb(253, 242, 242);
+  // box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 30px 5px 20px 5px;
+  border-radius: 20px;
+
+  .cover{
+    height: 500px;
+    // width: 100%;
+    display: flex;
+    object-fit: fill;
+    justify-content: center;
+    margin: 20px auto 20px auto;
+    // padding: 0 105px 0 105px;
+    border: solid white 2px;
+    border-radius: 6px;
+  }
+
+}
+.logo{
+  width: 70px;
   justify-content: center;
-  align-items: center;
-  font: 20px/1.7 'RobotoDraft', sans-serif;
 }
-
-.wrapper{
-  position: relative;
-  width: 960px;
-  height: 128px;
-}
-
-input{
-  position: absolute;
-  margin: 0 auto;
-  bottom: -130px;
-  border-radius: 15px;
-  left: 0;
-  right: 0;
-  width: 96px;
-  height: 48px;
-  cursor: pointer;
-}
-input:hover ~ #next-btn{ background: #3c605a; }
-input:active ~ #next-btn{ background: #3c605a; }
-input:not(:checked){ display: none; }
-
-input:not(:checked) + article{ animation: out 400ms cubic-bezier(.4,.0,.23,1) forwards; }
-article{
-  display: flex;
-  position: absolute;
-  align-items: center;
-  width: 100%;
-  height: 25%;
-  padding: 0 24px;
-  border-radius: 2px;
-  .card-book{
-    overflow: hidden;
-    background: white;
-    box-shadow: rgba(180, 180, 180, 0.05) 0px 1px 2px 0px;
-    margin: 0 auto;
-    border-radius: 30px;
-    .cover{
-      height: 200px;
-      width: 100%;
-      object-fit: contain;
-      justify-content: center;
-      margin: 20px auto 20px auto;
-      padding: 0 105px 0 105px;
-    }
-    h2{
-      font-size: 16px;
-      font-weight: 400;
-      margin: 0;
-    }
-    p{
-      font-size: 12px;
-      opacity: .7;
-      margin: 0;
-    }
-    .card-book-infos{
-      padding: 16px;
-      display: flex;
-      justify-content: space-between;
-      border-radius: 20px;
-      background-color: #FCF7F1;
-      font-family: "Poppins";
-      color: rgb(62, 62, 62);
-      align-items: flex-end;
-      position: relative;
-
-      .card-book-user{
-        position: absolute;
-        right: 16px;
-        top: 20px;
-        width: 40px;
-      }
-    }
+.card-book{
+  h2{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
   }
 }
-
-.bottom{
+.card-book p{
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+.card-book .card-book-infos{
+  padding: 16px;
   display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 128px;
-}
-.bottom > p{
-  font-size: 2em;
-  color: #c7c7c7;
-  user-select: none;
-  cursor: default;
-}
-
-input:checked ~ #next-btn{ display: flex; }
-#next-btn{
-  position: absolute;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  background: #4F7D75;
-  width: 96px;
-  height: 48px;
-  left: 0;
-  right: 0;
-  bottom: -130px;
-  margin: 0 auto;
-  text-align: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #497355;
   font-family: "Poppins";
-  font-size: 17px;
-  border-radius: 15px;
-  pointer-events: none;
+  color: white;
+  align-items: flex-end;
+  position: relative;
 }
-#next-btn:after{
-  content: counter(num) " left";
-  position: absolute;
-  width: 100%;
-  left: 96px;
-  font-size: 14px;
-  color: #8f8f8f;
-}
-
-input:checked{ counter-increment: num; }
-
-@keyframes out{
-  0%{ transform: translate3d(0,0,0) scale(1);  }
-  33%{ transform: translate3d(0,0,0) scale(1.25); box-shadow: 0 0px 0px rgba(0,0,0,.1); }
-  100%{ transform: translate3d(0,calc(-70vh - 100%),0); }
+.card-book-infos{
+  .card-book-user{
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    width: 40px;
+  }
 }

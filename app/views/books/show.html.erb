@@ -4,17 +4,21 @@
 
   <div class="book-info">
     <img src="<%= @book.photo %>" alt="book cover">
-    <p>Author: <%= @book.author[0].gsub(/[^0-9a-z ]/i, '') %></p>
-    <p>Genre: <%= @book.genre.gsub("--", " and ") %></p>
-    <p>Genre: <%= @book.description %></p>
+    <p>Author: <%= @book.author %></p>
+    <p>Genre: <%= @book.genre %></p>
+    <p>Description: <%= @book.description %></p>
     <p>Uploader: <%= @book.user.first_name %> <%= @book.user.last_name %></p>
   </div>
   <br>
-  <div class="btn-request">
-    <%= simple_form_for [@book, @request] do |f| %>
-    <%= f.submit "Swap", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+  <% if @book.user != current_user %>
+    <div class="btn-request">
+      <%= simple_form_for [@book, @request] do |f| %>
+      <%= f.submit "Swap", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  <% else %>
+  <h1>You own this book.</h1>
+  <% end %>
 <% if @request %>
   <%# <%= link_to "See there profile", request_user_path(request_id: 10, user: 3) %>
   <%= link_to "See there profile", request_user_path(:request_id, :user) %>
