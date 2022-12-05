@@ -1,13 +1,29 @@
+<<<<<<< HEAD
+.title {
+  h1{
+    color: rgb(80, 80, 80);
+    background-color: white;
+    height: 100px;
+    text-align: center;
+    font-family: "Poppins";
+    font-weight: 200;
+    font-size: 20px;
+    border-radius: 0 0 20px 20px;
+    margin-top: 40px;
+  }
+}
+=======
+>>>>>>> 1a97326dbb29282a8bcf25ab283904af0fec396f
 
 .card-book{
   overflow: hidden;
-  background: rgb(253, 242, 242);
+  background: rgb(255, 255, 255);
   // box-shadow: 0 0 15px rgba(0,0,0,0.1);
   margin: 30px 5px 20px 5px;
   border-radius: 20px;
 
-  .cover{
-    height: 500px;
+  .cover {
+    height: 400px;
     // width: 100%;
     display: flex;
     object-fit: fill;
@@ -17,12 +33,13 @@
     border: solid white 2px;
     border-radius: 6px;
   }
-
 }
+
 .logo{
   width: 70px;
   justify-content: center;
 }
+
 .card-book{
   h2{
   font-size: 16px;
@@ -30,22 +47,27 @@
   margin: 0;
   }
 }
+
 .card-book p{
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
-.card-book .card-book-infos{
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
-  background-color: #497355;
-  font-family: "Poppins";
-  color: white;
-  align-items: flex-end;
-  position: relative;
+
+.card-book {
+  .card-book-infos{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #D6E5E3;
+    font-family: "Poppins";
+    color: #2D3319;
+    align-items: flex-end;
+    position: relative;
+  }
 }
+
 .card-book-infos{
   .card-book-user{
     position: absolute;
