@@ -1,24 +1,21 @@
 <br>
 <div class="container">
-<div class=title ><h1>My dashboard</h1></div>
-<br>
+  <div class=title>My dashboard</div>
+  <br>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
       <li>
-        <p> Book requested: <%= request.book.name %></p>
-        <p> Who wants your book: <%= request.user.first_name %></p>
-        <%= link_to "Check his/her profile", request_user_path(request, request.user), class: 'button' %>
+        <p> <%= request.user.first_name %> requested <i><%= request.book.name[0,30] %></i></p>
+        <% if @swaps %>
+          <p>Book selected: </p>
+        <% else %>
+          <%= link_to "✓ Pick a book to swap", request_user_path(request, request.user), class: 'button' %>
+        <% end %>
+        <%# <%= link_to "X", mydashboard_path, class: 'button' %>
         <hr>
       </li>
     <% end %>
   </ul>
-</div>
-
-
- <div class="header-div">
-  <%= image_tag'/app/assets/images/iu.jpeg', class: "rounded-circle", atl: "...", style:"width:200px; height:200px; object-fit:cover;" %>
-  <h3>Tom</h3>
-  <div class="user-star-rating">
-    <span class="fs-3 ms-2"><% 5.times do %><i class="fa-solid fa-star text-warning"></i><% end %></span>
+  </div>
   </div>
 </div>
