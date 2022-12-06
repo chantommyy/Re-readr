@@ -23,10 +23,10 @@ class BooksController < ApplicationController
     @book = Book.new(
       barcode: book["isbn"],
       name: book["title"],
-      author: book["authors"],
+      author: book["authors"] ? book["authors"] : "unknown author",
       photo: book["image"],
       description: book["synopsis"],
-      genre: book["subjects"][0],
+      genre: book["subjects"] ? book["subjects"][0] : "Thriller",
       user_id: current_user.id
     )
     if @book.save
