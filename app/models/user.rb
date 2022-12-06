@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :swaps
   has_many :requests_as_owner, through: :books, source: :requests
   has_many :swaps_as_owner, through: :books, source: :swaps
+  has_one_attached :avatar
   validates :first_name, presence: true
   validates :last_name, presence: true
 end
