@@ -2,10 +2,18 @@
   height: 100vh;
   width: 100vw;
   background: #4F7D75;
+
+  .top-card{
+  background-color: #D6E5E3;
+  height: 60px;
+  border-radius: 0 0 30px 30px;
+  }
+
   .title {
     text-align: center;
     font-size: x-large;
-    font-family: cursive;
+    font-family: "Poppins", sans-serif;
+    color: #505050;
   }
   .h4 {
     font-family: cursive;
@@ -26,9 +34,13 @@
         height: 80px;
       }
       p {
-        margin-bottom: 5px;
+        margin-bottom: 7px;
       }
     }
+  }
+
+  .hr{
+    color: lightgray;
   }
 
   .button {
@@ -43,11 +55,13 @@
   }
 
   .Swaps_title{
-    font-family: cursive;
+    font-family: "Poppins", sans-serif;
+    color:#373737;
   }
 
   .Pending_title{
-    font-family: cursive;
+    font-family: "Poppins", sans-serif;
+    color:#373737;
   }
 
 }

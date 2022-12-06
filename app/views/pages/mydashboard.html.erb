@@ -1,15 +1,18 @@
 
 
 <div class="dashboard-container">
-  <div class="title">My dashboard</div>
+  <div class="top-card">
+   <div class="title">My dashboard</div>
+  </div>
   <br>
   <h4 class="Swaps_title">My swaps </h4>
+  <hr>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
       <li>
         <%= image_tag request.book.photo %>
         <div>
-          <p> Book name:<i><%= request.book.name[0,30] %></i></p>
+          <p> Book:<i><%= request.book.name[0,30] %></i></p>
           <p>requested by: <%= request.user.first_name %></p>
           <% if request.swaps.empty? %>
             <%= link_to "Check the bookshelf", request_user_path(request, request.user), class: 'button' %>
@@ -19,7 +22,6 @@
           <%# <%= link_to "X", mydashboard_path, class: 'button' %>
         </div>
       </li>
-      <hr>
     <% end %>
   </ul>
   <h4 class="Pending_title">Pending requests </h4>
