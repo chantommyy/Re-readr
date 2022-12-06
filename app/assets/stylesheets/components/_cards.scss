@@ -1,23 +1,32 @@
-<<<<<<< HEAD
-.title {
-  h1{
+.description{
     color: rgb(80, 80, 80);
-    background-color: white;
-    height: 100px;
     text-align: center;
     font-family: "Poppins";
     font-weight: 200;
-    font-size: 20px;
-    border-radius: 0 0 20px 20px;
-    margin-top: 40px;
-  }
+    margin: 0;
+    padding: 10px;
+
+
+    p{
+      font-size: 13px;
+      margin: 0 20px;
+    }
+
+    h1{
+      font-weight: 200;
+      font-size: 20px;
+    }
 }
-=======
->>>>>>> 1a97326dbb29282a8bcf25ab283904af0fec396f
+
+.wh-background{
+  background-color: #D6E5E3;
+  height: 100px;
+  border-radius: 0 0 30px 30px;
+}
 
 .card-book{
   overflow: hidden;
-  background: rgb(255, 255, 255);
+  background: #ffffff;
   // box-shadow: 0 0 15px rgba(0,0,0,0.1);
   margin: 30px 5px 20px 5px;
   border-radius: 20px;
@@ -30,7 +39,7 @@
     justify-content: center;
     margin: 20px auto 20px auto;
     // padding: 0 105px 0 105px;
-    border: solid white 2px;
+    border: solid white 4px;
     border-radius: 6px;
   }
 }
