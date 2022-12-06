@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :swaps_as_owner, through: :books, source: :swaps
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :address, presence: true
 end

@@ -19,28 +19,32 @@ tommy = User.create!(
   first_name: 'Tommy',
   last_name: 'Chan',
   email: "tommy@gmail.com",
-  password: "123456"
+  password: "123456",
+  address: "RE1 READ"
 )
 
 max = User.create!(
   first_name: 'Maxime',
   last_name: 'Sidonio',
   email: "max@gmail.com",
-  password: "123456"
+  password: "123456",
+  address: "RE1 READ"
 )
 
 saida = User.create!(
   first_name: 'Saida',
   last_name: 'Murtazali',
   email: "saida@gmail.com",
-  password: "123456"
+  password: "123456",
+  address: "RE1 READ"
 )
 
 dylan = User.create!(
   first_name: 'Dylan',
   last_name: 'Deehan',
   email: "dylan@gmail.com",
-  password: "123456"
+  password: "123456",
+  address: "RE1 READ"
 )
 
 # response = RestClient.get("https://api2.isbndb.com/books/magic?page=1&pageSize=20&column=title", {accept: 'application/json', Authorization: '48828_4ec0d4456ee0bfe47c0b200f5528b2c6'})
