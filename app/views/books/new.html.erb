@@ -1,12 +1,16 @@
-<div class="bg text-center">
-  <div class="barcode">
-    <h2>Add a new book</h2>
-    <p class="secondLine">Enter the ISBN code of the book to display the information on the platform.</p>
-    <%# <p> <input class="InputStyle" placeholder="ISBN: 10 or 13 characters long." style="font-family:Poppins" type="text"> </p> %>
-    <%#= link_to "Submit!", books_path, method: "Post", class: "btn btn-flat" %>
-    <%= simple_form_for @book do |f| %>
-      <%= f.input :barcode, as: :string, class: "InputStyle", placeholder: "ISBN: 10 or 13 characters long." %>
-      <%= f.submit "Add", class: "btn btn-flat" %>
-    <% end %>
+<div class="container">
+  <div class="bg text-center d-flex align-items-center justify-content-center">
+    <!--Div for Centered Text & Input-->
+    <div class="add-content">
+      <p class="firstLine"> Add a book </p>
+      <p class="secondLine">Type the ISBN code at the back of the book you want to exchange and hit 'Publish'</p>
+      <%= simple_form_for @book do |f| %>
+      <div class="wrapper">
+        <%= f.input :barcode, label: false, as: :string, class: "inputstyle", placeholder: "ISBN" %>
+        <br>
+        <%= f.submit "Publish", class: "btn btn-add-flat" %>
+      <% end %>
+      </div>
+    </div>
   </div>
 </div>

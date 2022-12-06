@@ -1,21 +1,19 @@
-
-
 <div class="dashboard-container">
   <div class="top-card">
    <div class="title">My dashboard</div>
   </div>
   <br>
-  <h4 class="Swaps_title">My swaps </h4>
+  <h4 class="Swaps_title">Pending</h4>
   <hr>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
       <li>
         <%= image_tag request.book.photo %>
         <div>
-          <p> Book:<i><%= request.book.name[0,30] %></i></p>
+          <p>Book:<i><%= request.book.name[0,30] %></i></p>
           <p>requested by: <%= request.user.first_name %></p>
           <% if request.swaps.empty? %>
-            <%= link_to "Check the bookshelf", request_user_path(request, request.user), class: 'button' %>
+            <%= link_to "Check #{request.user.first_name}'s bookshelf", request_user_path(request, request.user), class: 'button' %>
           <% else %>
             <p>You've selected: <i><%= request.swaps[0].book.name[0,30] %> </i>from <%= request.user.first_name %></p>
           <% end %>
@@ -25,11 +23,14 @@
     <% end %>
   </ul>
   <h4 class="Pending_title">Pending requests </h4>
-    <ul>
+  <ul>
+    <% current_user.requests.each do |request| %>
+      <li>Book: <i><%= request.book.name.first(30) %></i> Requested to <%= request.book.user.first_name %></li>
       <% current_user.requests.each do |request| %>
-      <li>
-        Book: <i><%= request.book.name.first(30) %></i> Requested to <%= request.book.user.first_name %>
-      </li>
+        <% unless request.swaps.empty? %>
+          <li>Please send your book to <%= request.swaps[0].user.first_name %> <%= request.swaps[0].user.address %></li>
+        <% end %>
       <% end %>
-    </ul>
+    <% end %>
+  </ul>
 </div>

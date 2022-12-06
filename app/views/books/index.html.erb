@@ -13,11 +13,13 @@
       <div class="card-book-infos">
         <div>
           <h2><%= book.name %></h2>
-          <p>Author: <%= book.author %></p>
+          <p>Author: <%= book.author.empty? ? "unknown" : book.author %></p>
           <p>Subject: <%= book.genre %></p>
         </div>
         <h2 class="card-book-pricing"><%=  %></h2>
+        <%= link_to request_user_path(:request_id, :user) do %>
           <%= cl_image_tag book.user.avatar.key, class:"card-book-user avatar-bordered" %>
+          <%end%>
       </div>
     </div>
   <% end %>
