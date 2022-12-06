@@ -15,5 +15,4 @@ class UsersController < ApplicationController
   def review_params
     params.require(:review).permit(:rating, :comment)
   end
-
 end

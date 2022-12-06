@@ -1,3 +1,9 @@
+ <div class="wh-background">
+    <div class="description">
+      <h1>Books to swap✨</h1>
+      <p>Browse books other people want to exchange.<br>Tap when you see a book you like to see the details.</p>
+    </div>
+  </div>
 <div class="container">
   <% @books.each do |book| %>
     <div class="card-book">
@@ -11,7 +17,7 @@
           <p>Subject: <%= book.genre %></p>
         </div>
         <h2 class="card-book-pricing"><%=  %></h2>
-          <%= image_tag "user.png", class: "card-book-user avatar-bordered" %>
+          <%= cl_image_tag book.user.avatar.key, class:"card-book-user avatar-bordered" %>
       </div>
     </div>
   <% end %>

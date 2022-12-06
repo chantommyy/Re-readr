@@ -2,7 +2,7 @@
   width: 100%;
   height:auto;
   min-height:100vh;
-  background-color: #FCF7F1;
+  background-color: #4F7D75;
   background-size: 100% 100%;
   background-position: top center;
 }
@@ -62,13 +62,21 @@ input, input:focus{
   color: rgb(43, 43, 43);
 }
 
-.btn-flat{
-  width: 161px;
-  height: 40px;
-  background-color: #4F7D75;
-  color: white;
-  border-radius: 10px;
+.container{
+  .btn-flat{
+    width: 161px;
+    height: 55px;
+    background-color: #4F7D75;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  .btn-flat:hover{
+    background-color: #ceba61;
+  }
 }
+
 
 @media only screen and (max-width: 600px) {
   .firstLine{

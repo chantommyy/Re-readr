@@ -31,7 +31,7 @@
         <% @reviews.each do |review| %>
           <% @total += review.rating  %>
         <% end %>
-        <% @average =  (@total.to_f / @reviews.length) %>
+        <% @average = (@total.to_f / @reviews.length) %>
         <p><%=@averageround =  (@total.to_f / @reviews.length).round(1) %></p>
       <% end  %>
       <div class="frame">

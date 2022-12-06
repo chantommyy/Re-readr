@@ -15,37 +15,58 @@ Book.destroy_all
 User.destroy_all
 puts 'creating'
 # the faker name gives out a first name and last name, so i split it to only give first or last name
+
 tommy = User.create!(
   first_name: 'Tommy',
   last_name: 'Chan',
+  address: "E9 5EN",
   email: "tommy@gmail.com",
   password: "123456",
   address: "RE1 READ"
 )
+puts "user created"
+file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263131/nvmgwdruwiadqpcfhk58.jpg')
+tommy.avatar.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+puts "image uploaded"
 
 max = User.create!(
   first_name: 'Maxime',
   last_name: 'Sidonio',
+  address: "E9 5EN",
   email: "max@gmail.com",
   password: "123456",
   address: "RE1 READ"
 )
+puts "user created"
+file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263142/hhjhbu5nncelgyfs5d0s.jpg')
+max.avatar.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+puts "image uploaded"
 
 saida = User.create!(
   first_name: 'Saida',
   last_name: 'Murtazali',
+  address: "E9 5EN",
   email: "saida@gmail.com",
   password: "123456",
   address: "RE1 READ"
 )
+puts "user created"
+file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263123/zrpl7gqa5ngotoi8dbzf.jpg')
+saida.avatar.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+puts "image uploaded"
 
 dylan = User.create!(
   first_name: 'Dylan',
   last_name: 'Deehan',
+  address: "E9 5EN",
   email: "dylan@gmail.com",
   password: "123456",
   address: "RE1 READ"
 )
+puts "user created"
+file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263137/sdmvfvzspxd1bbzzmcpu.png')
+dylan.avatar.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+puts "image uploaded"
 
 # response = RestClient.get("https://api2.isbndb.com/books/magic?page=1&pageSize=20&column=title", {accept: 'application/json', Authorization: '48828_4ec0d4456ee0bfe47c0b200f5528b2c6'})
 # repos = JSON.parse(response)
