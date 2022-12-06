@@ -4,13 +4,25 @@
     font-size: x-large;
     font-family: cursive;
   }
+  .h4 {
+    font-family: cursive;
+  }
+
   .button {
-      color: white;
+      color: rgb(0, 0, 0);
       padding: 8px 24px;
       border-radius: 4px;
-      background: #046e49;
+      background: #ffffff;
       transition: background 0.3s ease;
       text-decoration: none;
   }
-}
 
+  .Swaps_title{
+    font-family: cursive;
+  }
+
+  .Pending_title{
+    font-family: cursive;
+  }
+
+}

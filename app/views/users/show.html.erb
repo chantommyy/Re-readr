@@ -2,9 +2,24 @@
 <%# tells us the name of the data controller eg tabulator %>
 <div class="contents" data-controller="tabulator">
   <div class="tab">
-    <button data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
     <button data-tabulator-target="booksLink" data-action="click->tabulator#displayBooks">Books</button>
+    <button data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
     <button data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews">Reviews</button>
+  </div>
+
+
+<%# Books tab %>
+  <div data-tabulator-target="books" class="tabcontent">
+      <h3>My Books</h3>
+      <ul>
+        <% @user.books.each do |book| %>
+         <li><%= book.name %></li>
+          <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
+          <%= hidden_field_tag "book_id", book.id %>
+          <% end %>
+      <% end %>
+      </ul>
+      <%= link_to "home", root_path %>
   </div>
 
 <%# Profile tab %>
@@ -29,8 +44,6 @@
             </div>
             <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
             <div class="actions">
-              <button class="btn">Request Swap</button>
-              <button class="btn">Message</button>
             </div>
           </div>
 
@@ -55,19 +68,6 @@
     </div>
   </div>
 
-<%# Books tab %>
-  <div data-tabulator-target="books" class="tabcontent">
-      <h3>My Books</h3>
-      <ul>
-        <% @user.books.each do |book| %>
-         <li><%= book.name %></li>
-          <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
-          <%= hidden_field_tag "book_id", book.id %>
-          <% end %>
-      <% end %>
-      </ul>
-      <%= link_to "home", root_path %>
-  </div>
 
 
 

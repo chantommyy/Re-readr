@@ -20,12 +20,9 @@ $cursor: pointer;
 
 
 .book-info{
-  img:first-child {
-    width: 150px;
-  }
 
   img:last-child {
-    width: 60px;
+    width: 40px;
   }
 }
 
@@ -43,7 +40,6 @@ $cursor: pointer;
   .book-info{
     border-radius: 15px;
     margin: 20px;
-
 
     .book-cover-img{
       height: 300px;
