@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["profile", "books", "reviews", "profileLink", "reviewsLink", "booksLink"]
   connect() {
     // this.showTab()
-    this.displayProfile()
+    this.displayBooks()
 
   }
   displayProfile(event) {

@@ -2,30 +2,58 @@
 <div class="container">
   <div class=title>My dashboard</div>
   <br>
+coment out below
+  <h2>Pending requests: </h2>
+  <ul>
+   <% current_user.requests_as_owner.each do |request| %>
+      <li>
+        <p> <%= request.user.first_name %> requested <i><%= request.book.name[0,30] %></i> from you!</p>
+        <p><%= request.user.address %></p>
+ comment out above
   <h4 class=Swaps_title>My swaps </h4>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
       <li>
         <p> <%= request.user.first_name %> requested: <i><%= request.book.name[0,30] %></i></p>
+
         <% if request.swaps.empty? %>
           <%= link_to "✓ Pick a book to swap", request_user_path(request, request.user), class: 'button' %>
         <% else %>
           <p>You've selected: <i><%= request.swaps[0].book.name[0,30] %> </i>from <%= request.user.first_name %></p>
         <% end %>
+
         <%# <%= link_to "X", mydashboard_path, class: 'button' %>
         <hr>
       </li>
     <% end %>
   </ul>
+comment out below
+
+  <ul>
+    <% current_user.requests.each do |request| %>
+      <% if request.swaps.empty? %>
+        <li>Book: <%= request.book.name.first(30) %> Requested to <%= request.book.user.first_name %> - waiting on them to pick your book</li>
+      <% else %>
+        <li>Please send your book to <%= request.swaps[0].user.first_name %> <%= request.swaps[0].user.address %></li>
+      <% end  %>
+    <% end %>
+  </ul>
+  <h2>My swaps: </h2>
+comment out above
 <h4 class=Pending_title>Pending requests </h4>
   <ul>
     <% current_user.requests.each do |request| %>
     <li>
       Book: <i><%= request.book.name.first(30) %></i> Requested to <%= request.book.user.first_name %>
 
-    </li>
+    <% current_user.requests.each do |request| %>
+      <ul>
+        <% unless request.swaps.empty? %>
+          <li>Please send your book to <%= request.swaps[0].user.first_name %> <%= request.swaps[0].user.address %></li>
+      <% end  %>
     <% end %>
   </ul>
+
   </div>
   </div>
 </div>
