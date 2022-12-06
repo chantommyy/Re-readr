@@ -20,11 +20,6 @@
   <h1>You own this book.</h1>
   <% end %>
   <br>
-<% if @request %>
-  <%# <%= link_to "See there profile", request_user_path(request_id: 10, user: 3) %>
-  <%= link_to "See there profile", request_user_path(:request_id, :user) %>
-
-<% end %>
   <div class="reviews">
     <p>Reviews</p>
     <% unless @reviews.nil? %>
@@ -35,5 +30,4 @@
   </div>
   <br>
 </div>
-
 </div>
