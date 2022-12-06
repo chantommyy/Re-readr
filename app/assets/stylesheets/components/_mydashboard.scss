@@ -1,28 +1,67 @@
-.container {
+.dashboard-container {
+  height: 100vh;
+  width: 100vw;
+  background: #4F7D75;
+
+  .top-card{
+  background-color: #D6E5E3;
+  height: 60px;
+  border-radius: 0 0 30px 30px;
+  }
+
   .title {
     text-align: center;
     font-size: x-large;
-    font-family: cursive;
+    font-family: "Poppins", sans-serif;
+    color: #505050;
   }
   .h4 {
     font-family: cursive;
   }
+  ul {
+    padding-left: 0;
+    li {
+      border-radius: 20px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 0 24px;
+      height: 120px;
+      img {
+        width: 50px;
+        margin-right: 15px;
+        height: 80px;
+      }
+      p {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  .hr{
+    color: lightgray;
+  }
 
   .button {
-      color: rgb(0, 0, 0);
-      padding: 8px 24px;
-      border-radius: 4px;
-      background: #ffffff;
-      transition: background 0.3s ease;
-      text-decoration: none;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: #ffffff;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    background-color: #D6E5E3;
   }
 
   .Swaps_title{
-    font-family: cursive;
+    font-family: "Poppins", sans-serif;
+    color:#373737;
   }
 
   .Pending_title{
-    font-family: cursive;
+    font-family: "Poppins", sans-serif;
+    color:#373737;
   }
 
 }
