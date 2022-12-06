@@ -1,77 +1,78 @@
-.bg{
+.bg {
   width: 100%;
-  height:auto;
+  height: auto;
   min-height:100vh;
-  background-color: #FCF7F1;
+  background-color: #4F7D75;
   background-size: 100% 100%;
   background-position: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.content{
-  margin-top: 20%;
-}
+// .content {
+//   margin-top: 20%;
+// }
 
-.barcode {
+.centered {
   position: absolute;
   top: 40%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.InputStyle{
-  border-radius: 25px;
-  border: solid 1px rgb(34, 34, 34);
-  background: transparent;
-  width: 300px;
-  padding: 10px 20px;
-}
+// .inputstyle{
+//   border-radius: 25px;
+//   border: solid 1px white;
+//   background: transparent;
+//   width: 300px;
+//   padding: 10px 20px;
+//   position: absolute;
+// }
 
-input,input::-webkit-input-placeholder {
-  font-size: 12px;
-  color:rgb(43, 43, 43);
-}
-
-.social-btn{
-  position: absolute;
-  bottom: 20px;
-}
-
-i{
-  padding:5px;
-  color:rgb(36, 36, 36);
-}
-
-input, input:focus{
-  border: solid 1px rgb(48, 48, 48);
-        outline:0;
-        -webkit-appearance:none;
-        box-shadow: nones;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-  }
-
-.secondLine{
+.secondLine {
+  display: inline-block;
   font-weight: 350;
   font-size:15px;
   margin-bottom: 5%;
-  color: rgb(41, 41, 41);
+  color: white;
 }
 
 .firstLine{
   font-size: 30px;
-  color: rgb(43, 43, 43);
-}
-
-.btn-flat{
-  width: 161px;
-  height: 40px;
-  background-color: #4F7D75;
   color: white;
-  border-radius: 10px;
+  font-weight: 200;
 }
 
-@media only screen and (max-width: 600px) {
-  .firstLine{
-    font-size: 20px;
-  }
+#book_barcode{
+  border-radius: 25px;
+  border: solid 1px white;
+  // background: transparent;
+  width: 300px;
+  height: 40px;
+  padding: 10px 20px;
+  // position: absolute;
+  // bottom: 340px;
+  // left: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.btn-add-flat{
+  background-color: #D6E5E3;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 150px;
+  height: 50px;
+}
+
+.btn-add-flat:hover{
+  background-color: #84f6e4;
+}
+
+.wrapper {
+  display: inline-block;
 }

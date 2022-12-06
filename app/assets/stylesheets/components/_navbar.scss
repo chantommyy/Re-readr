@@ -1,7 +1,7 @@
 
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
-  background-color: #D7E15C;
+  background-color: #ebe2bc;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -48,5 +48,28 @@
     float: none;
     display: block;
     text-align: left;
+  }
+}
+
+.navbar{
+  .fa-right-left{
+    color: rgb(74, 74, 74);
+  }
+  .fa-book{
+    color: rgb(74, 74, 74);
+  }
+  .fa-circle-plus{
+    color: rgb(74, 74, 74);
+  }
+}
+
+.avatarnav{
+  .navbar-nav{
+    .nav-item{
+      .dropdown-toggle{
+        margin: 10px 15px;
+        width: 30px;
+      }
+    }
   }
 }
