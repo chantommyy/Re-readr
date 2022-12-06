@@ -1,14 +1,14 @@
 <div class="show-page">
   <div class="container">
   <%= link_to "<< Back", books_path, class: "back-link"%>
-  <h1 class="book-name">"<strong><%= @book.name[0,30] %></strong>"</h1>
 
   <div class="book-info">
-    <img src="<%= @book.photo %>" alt="book cover">
+    <img src="<%= @book.photo %>" alt="book cover" class="book-cover-img">
+    <p><strong>Title:</strong> "<%= @book.name %>"</p>
     <p><strong>Author:</strong> <%= @book.author %></p>
     <p><strong>Genre:</strong> <%= @book.genre %></p>
     <p><strong>Description:</strong> <%= @book.description %></p>
-    <p><%= cl_image_tag @book.user.avatar.key,class:"card-book-user avatar-bordered"  %> <%= @book.user.first_name %> <%= @book.user.last_name[0] %>.</p>
+    <p><strong>Uploaded by</strong> <%= cl_image_tag @book.user.avatar.key,class:"card-book-user avatar-bordered"  %> <%= @book.user.first_name %> <%= @book.user.last_name[0] %>.</p>
   </div>
   <% if @book.user != current_user %>
     <div class="btn-request">
