@@ -1,8 +1,17 @@
+.add-page-bg{
+  background-color: #d9eae8;
+}
+
+.add-content{
+  top: 110px;
+  position: absolute;
+}
+
 .bg {
   width: 100%;
   height: auto;
   min-height:100vh;
-  background-color: #4F7D75;
+  background-color: #d9eae8;
   background-size: 100% 100%;
   background-position: top center;
   display: flex;
@@ -10,9 +19,11 @@
   align-items: center;
 }
 
-// .content {
-//   margin-top: 20%;
-// }
+.gif-book{
+  width: 200px;
+  display: inline-block;
+  top: 50px;
+}
 
 .centered {
   position: absolute;
@@ -20,32 +31,23 @@
   transform: translate(-50%, -50%);
 }
 
-// .inputstyle{
-//   border-radius: 25px;
-//   border: solid 1px white;
-//   background: transparent;
-//   width: 300px;
-//   padding: 10px 20px;
-//   position: absolute;
-// }
-
 .secondLine {
   display: inline-block;
   font-weight: 350;
   font-size:15px;
   margin-bottom: 5%;
-  color: white;
+  color: #4F7D75;
 }
 
 .firstLine{
   font-size: 30px;
-  color: white;
+  color: #4F7D75;
   font-weight: 200;
 }
 
 #book_barcode{
   border-radius: 25px;
-  border: solid 1px white;
+  border: solid 2px #4F7D75;
   // background: transparent;
   width: 300px;
   height: 40px;
@@ -60,17 +62,18 @@
 }
 
 .btn-add-flat{
-  background-color: #D6E5E3;
+  background-color: #4F7D75;
   display: inline-block;
   justify-content: center;
   align-items: center;
   font-size: 14px;
   width: 150px;
   height: 50px;
+  color: white;
 }
 
 .btn-add-flat:hover{
-  background-color: #84f6e4;
+  background-color: #29433e;
 }
 
 .wrapper {

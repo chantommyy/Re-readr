@@ -1,15 +1,18 @@
-<div class="container">
-  <div class="bg text-center d-flex align-items-center justify-content-center">
-    <!--Div for Centered Text & Input-->
-    <div class="add-content">
-      <p class="firstLine"> Add a book </p>
-      <p class="secondLine">Type the ISBN code at the back of the book you want to exchange and hit 'Publish'</p>
-      <%= simple_form_for @book do |f| %>
-      <div class="wrapper">
-        <%= f.input :barcode, label: false, as: :string, class: "inputstyle", placeholder: "ISBN" %>
-        <br>
-        <%= f.submit "Publish", class: "btn btn-add-flat" %>
-      <% end %>
+<div class="add-page-bg">
+  <div class="container">
+    <div class="bg text-center d-flex align-items-center justify-content-center">
+      <!--Div for Centered Text & Input-->
+      <div class="add-content">
+        <img src="https://media.giphy.com/media/IGg2Snwcukr7U7bW1s/giphy.gif" alt="" class="gif-book">
+        <p class="firstLine"> Add a book </p>
+        <p class="secondLine">Type the ISBN code at the back of the book<br>you want to exchange and hit 'Publish'.</p>
+        <%= simple_form_for @book do |f| %>
+        <div class="wrapper">
+          <%= f.input :barcode, label: false, as: :string, class: "inputstyle", placeholder: "ISBN" %>
+          <br>
+          <%= f.submit "Publish", class: "btn btn-add-flat" %>
+        <% end %>
+        </div>
       </div>
     </div>
   </div>
