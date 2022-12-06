@@ -17,7 +17,7 @@
           <p>Subject: <%= book.genre %></p>
         </div>
         <h2 class="card-book-pricing"><%=  %></h2>
-          <%= image_tag "user.png", class: "card-book-user avatar-bordered" %>
+          <%= cl_image_tag book.user.avatar.key, class:"card-book-user avatar-bordered" %>
       </div>
     </div>
   <% end %>

@@ -18,6 +18,17 @@ $cursor: pointer;
     font-size: 18px;
   }
 
+
+.book-info{
+  img:first-child {
+    width: 150px;
+  }
+
+  img:last-child {
+    width: 60px;
+  }
+}
+
   .btn-request{
     margin-left: auto;
     margin-right: auto;
@@ -53,4 +64,8 @@ $cursor: pointer;
     }
   }
 
+}
+
+.card-book-user{
+  width: 400px;
 }
