@@ -1,33 +1,34 @@
 <div class="show-page">
   <div class="container">
-  <%= link_to "<< Back", books_path, class: "back-link"%>
+  <br>
+    <%= link_to "<< Back", books_path, class: "back-link"%>
 
-  <div class="book-info">
-    <img src="<%= @book.photo %>" alt="book cover" class="book-cover-img">
-    <p><strong>Title:</strong> "<%= @book.name %>"</p>
-    <p><strong>Author:</strong> <%= @book.author %></p>
-    <p><strong>Genre:</strong> <%= @book.genre %></p>
-    <p><strong>Description:</strong> <%= @book.description %></p>
-    <p><strong>Uploaded by</strong> <%= cl_image_tag @book.user.avatar.key,class:"card-book-user avatar-bordered"  %> <%= @book.user.first_name %> <%= @book.user.last_name[0] %>.</p>
-  </div>
-  <% if @book.user != current_user %>
-    <div class="btn-request">
-      <%= simple_form_for [@book, @request] do |f| %>
-      <%= f.submit "Swap", class: "btn btn-flat" %>
+    <div class="book-info">
+      <img src="<%= @book.photo %>" alt="book cover" class="book-cover-img">
+      <p><strong>Title:</strong> "<%= @book.name %>"</p>
+      <p><strong>Author:</strong> <%= @book.author %></p>
+      <p><strong>Genre:</strong> <%= @book.genre %></p>
+      <p><strong>Description:</strong> <%= @book.description %></p>
+      <p><strong>Uploaded by</strong> <%= cl_image_tag @book.user.avatar.key,class:"card-book-user avatar-bordered"  %> <%= @book.user.first_name %> <%= @book.user.last_name[0] %>.</p>
+    </div>
+    <% if @book.user != current_user %>
+      <div class="btn-request">
+        <%= simple_form_for [@book, @request] do |f| %>
+        <%= f.submit "Swap", class: "btn btn-flat" %>
+        <% end %>
+      </div>
+    <% else %>
+    <h1>You own this book.</h1>
+    <% end %>
+    <br>
+    <div class="reviews">
+      <p>Reviews</p>
+      <% unless @reviews.nil? %>
+        <% @reviews.each do |review| %>
+          <p><%= review.comment %></p>
+        <% end %>
       <% end %>
     </div>
-  <% else %>
-  <h1>You own this book.</h1>
-  <% end %>
-  <br>
-  <div class="reviews">
-    <p>Reviews</p>
-    <% unless @reviews.nil? %>
-      <% @reviews.each do |review| %>
-        <p><%= review.comment %></p>
-      <% end %>
-    <% end %>
+    <br>
   </div>
-  <br>
-</div>
 </div>
