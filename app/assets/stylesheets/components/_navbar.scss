@@ -50,3 +50,26 @@
     text-align: left;
   }
 }
+
+.navbar{
+  .fa-right-left{
+    color: rgb(74, 74, 74);
+  }
+  .fa-book{
+    color: rgb(74, 74, 74);
+  }
+  .fa-circle-plus{
+    color: rgb(74, 74, 74);
+  }
+}
+
+.avatarnav{
+  .navbar-nav{
+    .nav-item{
+      .dropdown-toggle{
+        margin: 10px 15px;
+        width: 30px;
+      }
+    }
+  }
+}
