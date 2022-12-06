@@ -1,24 +1,27 @@
-<div class="container">
-  <h1><%= @book.name[0,30] %></h1>
-  <%= link_to "Back to Books", books_path %>
+<div class="show-page">
+  <div class="container">
+  <%= link_to "<< Back", books_path, class: "back-link"%>
+  <h1 class="book-name">"<strong><%= @book.name[0,30] %></strong>"</h1>
 
   <div class="book-info">
-    <img src="<%= @book.photo %>" alt="book cover">
-    <p>Author: <%= @book.author %></p>
-    <p>Genre: <%= @book.genre %></p>
-    <p>Description: <%= @book.description %></p>
-    <p>Uploader: <%= @book.user.first_name %> <%= @book.user.last_name %></p>
+    <img src="<%= @book.photo %>" alt="book cover" class="book-cover-img">
+    <div class="book-description">
+      <p><strong>Author:</strong> <%= @book.author %></p>
+      <p><strong>Genre:</strong> <%= @book.genre %></p>
+      <p><strong>Description:</strong> <%= @book.description %></p>
+      <p><strong>Uploader:</strong> <%= @book.user.first_name %> <%= @book.user.last_name %></p>
+    </div>
   </div>
-  <br>
   <% if @book.user != current_user %>
     <div class="btn-request">
       <%= simple_form_for [@book, @request] do |f| %>
-      <%= f.submit "Swap", class: "btn btn-primary" %>
+      <%= f.submit "Swap", class: "btn btn-flat" %>
       <% end %>
     </div>
   <% else %>
   <h1>You own this book.</h1>
   <% end %>
+  <br>
 <% if @request %>
   <%# <%= link_to "See there profile", request_user_path(request_id: 10, user: 3) %>
   <%= link_to "See there profile", request_user_path(:request_id, :user) %>
@@ -33,4 +36,6 @@
     <% end %>
   </div>
   <br>
+</div>
+
 </div>

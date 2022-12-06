@@ -7,6 +7,10 @@
 }
 
 .container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
   .logo{
     font-family: $headers-font;
     font-weight: 200;
@@ -41,11 +45,6 @@
   .btn-green:hover{
     background-color: #253d39;
   }
-  height: 100%;
-  width: 101%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 
