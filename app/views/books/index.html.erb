@@ -1,7 +1,7 @@
  <div class="wh-background">
-    <div class="description">
-      <h1>Books to swap✨</h1>
-      <p>Browse books other people want to exchange.<br>Tap when you see a book you like to see the details.</p>
+    <div class="description d-flex align-self-center">
+      <%= image_tag "logo-black.png", class: "img-logo-sm align-self-center" %>
+      <p>Browse books other people want to exchange. Tap when you see a book you like to swap.</p>
     </div>
   </div>
 <div class="container">
@@ -19,7 +19,7 @@
         <h2 class="card-book-pricing"><%=  %></h2>
         <%= link_to request_user_path(:request_id, :user) do %>
           <%= cl_image_tag book.user.avatar.key, class:"card-book-user avatar-bordered" %>
-          <%end%>
+        <% end %>
       </div>
     </div>
   <% end %>
