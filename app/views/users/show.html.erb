@@ -71,7 +71,8 @@
             <div class="center">
               <div class="profile">
                 <div class="image">
-                  <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" width="70" height="70" alt="<%= @user.first_name %> <%= @user.last_name %>">
+
+                  <%= cl_image_tag @user.avatar.key,class:"card-book-user avatar-bordered"%>
                 </div>
                 <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
                 <div class="parameter">Average rating</div>
@@ -110,6 +111,9 @@
       </div>
       </div>
 
+    </div>
+
+
   <%# Reviews tab %>
 
 
@@ -124,6 +128,5 @@
       </div>
     </div>
   </div>
-
 </div>
 </div>
