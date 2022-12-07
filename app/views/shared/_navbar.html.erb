@@ -8,4 +8,7 @@
       <%= link_to "/mydashboard" do %>
         <i class="fa-solid fa-right-left"></i>
       <% end %>
+        <%= link_to "/users/edit" do %>
+        <%= cl_image_tag current_user.avatar.key, class:"card-book-user avatar-bordered" %>
+      <% end %>
 </div>
