@@ -1,120 +1,93 @@
 
 <%# tells us the name of the data controller eg tabulator %>
-<div class="contents" data-controller="tabulator">
-  <div class="tab">
-
-    <button data-tabulator-target="booksLink" data-action="click->tabulator#displayBooks">Bookshelf</button>
-    <button data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
-    <button data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews">Add Review</button>
-  </div>
-
-  <%# calculate the average rating %>
-  <% if @reviews.length > 0 %>
-    <% @total = 0 %>
-    <% @reviews.each do |review| %>
-      <% @total += review.rating  %>
-    <% end %>
-    <% @average =  (@total.to_f / @reviews.length) %>
-    <%@averageround =  (@total.to_f / @reviews.length).round(1) %>
-  <% end  %>
-
-  <div data-tabulator-target="books" class="tabcontent">
-
-    <h3>Available Books</h3>
-    <p>Have a look at my wares to be traded!</p>
-  <%# Bookenator%>
-    <div class="bookcontents" data-controller="bookenator">
-      <%# books show hide below here %>
-      <div class="booktab">
-        <%# create button for each book %>
-        <% @user.books.each do |book| %>
-          <button data-bookenator-target="button" data-action="click->bookenator#displayBook" data-id="<%= book.id %>"><%= book.name %></button>
-        <% end %>
-      </div>
-    <%# all the book/info go under here %>
-      <% @user.books.each do |book| %>
-        <div class="d-none" data-bookenator-target="book" data-id="<%= book.id %>" class="bookcontent">
-          <p><%= book.name %></p>
-        </div>
-      <% end %>
+<div class="container">
+  <div class="contents" data-controller="tabulator">
+    <div class="tab">
+      <button class="each-tab" data-tabulator-target="booksLink" data-action="click->tabulator#displayBooks">Bookshelf</button>
+      <button class="each-tab" data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
+      <button class="each-tab" data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews">Add Review</button>
     </div>
-    <%# end of bookenator %>
-  </div>
 
+    <%# calculate the average rating %>
+    <% if @reviews.length > 0 %>
+      <% @total = 0 %>
+      <% @reviews.each do |review| %>
+        <% @total += review.rating  %>
+      <% end %>
+      <% @average =  (@total.to_f / @reviews.length) %>
+      <%@averageround =  (@total.to_f / @reviews.length).round(1) %>
+    <% end %>
 
-<%# end of bookenator %>
-
-<%# Profile tab %>
-  <div data-tabulator-target="profile" class="tabcontent">
-    <div class="profile-container container-row">
-      <div class="profile-card layer1">
-          <div class="center">
-            <div class="profile">
-              <div class="image">
-                <div class="circle-1"></div>
-                <div class="circle-2"></div>
-                <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" width="70" height="70" alt="<%= @user.first_name %> <%= @user.last_name %>">
-              </div>
-              <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
-              <div class="address">My adress is this house name</div>
-              <div class="actions">
-              </div>
-            </div>
-           </div>
-
-
-  <%# Profile tab %>
-    <div data-tabulator-target="profile">
-      <div class="profile-container container-row">
-        <div class="profile-card layer1">
-            <div class="center">
-              <div class="profile">
-                <div class="image">
-
-                  <%= cl_image_tag @user.avatar.key,class:"card-book-user avatar-bordered"%>
-                </div>
-                <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
-                <div class="parameter">Average rating</div>
-                <br>
-                <div class="value"><%= @averageround %></div>
-                <div class="Stars" style="--rating: <%= @average %>;" aria-label="Rating of this product is  <%= @averageround %> out of 5."></div>
-                <%# <div class="address">My address:</div> %>
-                <div class="actions">
-                </div>
-              </div>
-
-              <div class="stats">
-                <div class="box">
-                  <span class="parameter">Previous swaps:</span>
-                  <span class="value">5</span>
-                  <%# add swaps.length below when model made %>
-                </div>
-                <div class="box">
-                  <span class="parameter">Favourite genre:</span>
-                  <span class="value">Crime</span>
-                </div>
-              </div>
-            </div>
+    <div data-tabulator-target="books" class="tabcontent">
+      <h3>Available Books</h3>
+      <p>Have a look at my wares to be traded!</p>
+      <%# Bookenator%>
+      <div class="bookcontents" data-controller="bookenator">
+        <%# books show hide below here %>
+        <div class="booktab">
+          <%# create button for each book %>
+          <% @user.books.each do |book| %>
+            <button data-bookenator-target="button" data-action="click->bookenator#displayBook" data-id="<%= book.id %>"><%= book.name %></button>
+          <% end %>
         </div>
-
-      <div class="review-container layer2">
-        <% @reviews.each do |review| %>
-          <div class="review-card">
-            <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" alt="Avatar" style="width:90px">
-            <span style="text-alight: right"><%= review.user.first_name %></span>
-            <h3 class="review-comment"><%= review.comment %></h3>
-            <%# <p><%= review.rating</p> %>
-            <div class="Stars" style="--rating: <%= review.rating %>;" aria-label="Rating of this product is  <%= review.rating %> out of 5."></div>
+        <%# all the book/info go under here %>
+        <% @user.books.each do |book| %>
+          <div class="d-none" data-bookenator-target="book" data-id="<%= book.id %>" class="bookcontent">
+            <p><%= book.name %></p>
           </div>
         <% end %>
       </div>
-      </div>
-
+      <%# end of bookenator %>
     </div>
 
+    <%# Profile tab %>
+    <div data-tabulator-target="profile">
+      <div class="profile-container container-row">
+        <div class="profile-card layer1">
+          <div class="center">
+            <div class="profile">
+              <div class="image">
+              <%= cl_image_tag @user.avatar.key,class:"card-book-user avatar-bordered"%>
+              </div>
+              <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
+              <div class="parameter">Average rating</div>
+              <br>
+              <div class="value"><%= @averageround %></div>
+              <div class="Stars" style="--rating: <%= @average %>;" aria-label="Rating of this product is  <%= @averageround %> out of 5."></div>
+              <%# <div class="address">My address:</div> %>
+              <div class="actions">
+              </div>
+            </div>
 
-  <%# Reviews tab %>
+            <div class="stats">
+              <div class="box">
+                <span class="parameter">Previous swaps:</span>
+                <span class="value">5</span>
+                <%# add swaps.length below when model made %>
+              </div>
+              <div class="box">
+                <span class="parameter">Favourite genre:</span>
+                <span class="value">Crime</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="review-container layer2">
+          <% @reviews.each do |review| %>
+            <div class="review-card">
+              <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" alt="Avatar" style="width:90px">
+              <span style="text-alight: right"><%= review.user.first_name %></span>
+              <h3 class="review-comment"><%= review.comment %></h3>
+              <%# <p><%= review.rating</p> %>
+              <div class="Stars" style="--rating: <%= review.rating %>;" aria-label="Rating of this product is  <%= review.rating %> out of 5."></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <%# Reviews tab %>
 
     <div data-tabulator-target="reviews">
       <div class="make-review-container">
@@ -126,5 +99,6 @@
       <% end %>
       </div>
     </div>
-  </div>
+
+</div>
 </div>
