@@ -30,7 +30,7 @@
   <hr>
   <ul>
     <% current_user.requests_as_owner.each do |request| %>
-      <% if request.swaps %>
+      <% if request.swaps.any? %>
       <li>
         <%= image_tag request.swaps[0].book.photo %>
         <%= image_tag request.book.photo %>
@@ -42,7 +42,7 @@
       <% end %>
     <% end %>
     <% current_user.requests.each do |request| %>
-      <% if request.swaps %>
+      <% if request.swaps.any? %>
         <li>
           <p>Please send your book <%= request.swaps[0].book.name %> to <%= request.swaps[0].user.first_name %><%= request.swaps[0].user.address %></p>
           <p>You chose: <i><%= request.book.name.first(30) %> from <%= request.user.first_name %></i></p>
