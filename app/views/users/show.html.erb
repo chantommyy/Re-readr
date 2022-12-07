@@ -14,7 +14,7 @@
         <% @total += review.rating  %>
       <% end %>
       <% @average =  (@total.to_f / @reviews.length) %>
-      <%@averageround =  (@total.to_f / @reviews.length).round(1) %>
+      <% @averageround =  (@total.to_f / @reviews.length).round(1) %>
     <% end  %>
 
 
@@ -42,22 +42,19 @@
             <div class="center">
               <div class="profile">
                 <div class="image">
-                  <div class="circle-1"></div>
-                  <div class="circle-2"></div>
                   <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" width="70" height="70" alt="<%= @user.first_name %> <%= @user.last_name %>">
                 </div>
                 <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
-                <div class="address">My address:</div>
+                <div class="parameter">Average rating</div>
+                <br>
+                <div class="value"><%= @averageround %></div>
+                <div class="Stars" style="--rating: <%= @average %>;" aria-label="Rating of this product is  <%= @averageround %> out of 5."></div>
+                <%# <div class="address">My address:</div> %>
                 <div class="actions">
                 </div>
               </div>
 
               <div class="stats">
-                <div class="box">
-                  <span class="value"><%= @averageround %></span>
-                  <span class="parameter">Average rating:</span>
-                  <div class="Stars" style="--rating: <%= @average %>;" aria-label="Rating of this product is  <%= @averageround %> out of 5."></div>
-                </div>
                 <div class="box">
                   <span class="parameter">Previous swaps:</span>
                   <span class="value">5</span>
@@ -75,8 +72,8 @@
           <div class="review-card">
             <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" alt="Avatar" style="width:90px">
             <span style="text-alight: right"><%= review.user.first_name %></span>
-            <h3><%= review.comment %></h3>
-            <p><%= review.rating %></p>
+            <h3 class="review-comment"><%= review.comment %></h3>
+            <%# <p><%= review.rating</p> %>
             <div class="Stars" style="--rating: <%= review.rating %>;" aria-label="Rating of this product is  <%= review.rating %> out of 5."></div>
           </div>
         <% end %>
