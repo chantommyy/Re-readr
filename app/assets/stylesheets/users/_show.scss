@@ -1,4 +1,10 @@
 // working page
+.book-cover-img {
+  max-width: 300px;
+}
+.form-select {
+  width: 350px;
+}
 
 h3{
   font-weight: 400;
@@ -195,7 +201,7 @@ li{
     margin-bottom: 0px;
   }
 
-  /* Add media queries for responsiveness. This will center both the text and the image inside the review-card */
+  // * Add media queries for responsiveness. This will center both the text and the image inside the review-card */
   @media (max-width: 100%) {
     .review-card {
       text-align: center;
@@ -209,10 +215,12 @@ li{
   }
 }
 
+
 // profile container
 .profile-container {
   $brown: #ffffff;
   position: absolute;
+  left: 10%;
   .profile-card {
 
       .center {
@@ -272,7 +280,7 @@ li{
           img {
             display: block;
             border-radius: 50%;
-            background: #F5E8DF;
+            background: #bf601c;
           }
 
           &:hover {
@@ -340,7 +348,7 @@ li{
           transition: all .4s ease-in-out;
 
           &:hover {
-            background: #E1CFC2;
+            background: #c2e1c3;
             cursor: pointer;
           }
 

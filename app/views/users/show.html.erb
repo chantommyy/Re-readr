@@ -1,38 +1,67 @@
 
 <%# tells us the name of the data controller eg tabulator %>
 <div class="container">
-  <div class="contents" data-controller="tabulator">
-    <div class="tab">
-      <button data-tabulator-target="booksLink" data-action="click->tabulator#displayBooks" class="each-tab">Bookshelf</button>
-      <button data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile" class="each-tab">Profile</button>
-      <button data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews" class="each-tab">Add Review</button>
-    </div>
-    <%# calculate the average rating %>
-    <% if @reviews.length > 0 %>
-      <% @total = 0 %>
-      <% @reviews.each do |review| %>
-        <% @total += review.rating  %>
-      <% end %>
-      <% @average =  (@total.to_f / @reviews.length) %>
-      <% @averageround =  (@total.to_f / @reviews.length).round(1) %>
-    <% end  %>
+<div class="contents" data-controller="tabulator">
+  <div class="tab">
 
+    <button data-tabulator-target="booksLink" data-action="click->tabulator#displayBooks">Bookshelf</button>
+    <button data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
+    <button data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews">Add Review</button>
+  </div>
 
-  <%# Books tab %>
-    <div data-tabulator-target="books" class="tabcontent">
-        <h3>Available Books:</h3>
-        <p>Have a look at my wares to be traded!</p>
-        <ul>
-          <% @user.books.each do |book| %>
-          <li>"<%= book.name %>"</li>
-            <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
-            <%= hidden_field_tag "book_id", book.id %>
-            <% end %>
+  <%# calculate the average rating %>
+  <% if @reviews.length > 0 %>
+    <% @total = 0 %>
+    <% @reviews.each do |review| %>
+      <% @total += review.rating  %>
+    <% end %>
+    <% @average =  (@total.to_f / @reviews.length) %>
+    <%@averageround =  (@total.to_f / @reviews.length).round(1) %>
+  <% end  %>
+
+  <div data-tabulator-target="books" class="tabcontent">
+
+    <h3>Available Books</h3>
+    <p>Have a look at my wares to be traded!</p>
+  <%# Bookenator%>
+    <div class="bookcontents" data-controller="bookenator">
+      <%# books show hide below here %>
+      <div class="booktab">
+        <%# create button for each book %>
+        <% @user.books.each do |book| %>
+          <button data-bookenator-target="button" data-action="click->bookenator#displayBook" data-id="<%= book.id %>"><%= book.name %></button>
         <% end %>
-        </ul>
+      </div>
+    <%# all the book/info go under here %>
+      <% @user.books.each do |book| %>
+        <div class="d-none" data-bookenator-target="book" data-id="<%= book.id %>" class="bookcontent">
+          <p><%= book.name %></p>
+        </div>
+      <% end %>
     </div>
+    <%# end of bookenator %>
+  </div>
 
-    <%# <%= link_to "<<Back", root_path %>
+
+<%# end of bookenator %>
+
+<%# Profile tab %>
+  <div data-tabulator-target="profile" class="tabcontent">
+    <div class="profile-container container-row">
+      <div class="profile-card layer1">
+          <div class="center">
+            <div class="profile">
+              <div class="image">
+                <div class="circle-1"></div>
+                <div class="circle-2"></div>
+                <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" width="70" height="70" alt="<%= @user.first_name %> <%= @user.last_name %>">
+              </div>
+              <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>
+              <div class="address">My adress is this house name</div>
+              <div class="actions">
+              </div>
+            </div>
+           </div>
 
 
   <%# Profile tab %>
@@ -67,6 +96,7 @@
               </div>
             </div>
         </div>
+        
       <div class="review-container layer2">
         <% @reviews.each do |review| %>
           <div class="review-card">
@@ -79,12 +109,9 @@
         <% end %>
       </div>
       </div>
-    </div>
-
-
-
 
   <%# Reviews tab %>
+
 
     <div data-tabulator-target="reviews">
       <div class="make-review-container">
@@ -98,4 +125,5 @@
     </div>
   </div>
 
+</div>
 </div>

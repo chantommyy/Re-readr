@@ -22,7 +22,6 @@ tommy = User.create!(
   address: "E9 5EN",
   email: "tommy@gmail.com",
   password: "123456",
-  address: "RE1 READ"
 )
 puts "user created"
 file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263131/nvmgwdruwiadqpcfhk58.jpg')
@@ -32,10 +31,9 @@ puts "image uploaded"
 max = User.create!(
   first_name: 'Maxime',
   last_name: 'Sidonio',
-  address: "E9 5EN",
+  address: "L18 2EU",
   email: "max@gmail.com",
   password: "123456",
-  address: "RE1 READ"
 )
 puts "user created"
 file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263142/hhjhbu5nncelgyfs5d0s.jpg')
@@ -45,10 +43,9 @@ puts "image uploaded"
 saida = User.create!(
   first_name: 'Saida',
   last_name: 'Murtazali',
-  address: "E9 5EN",
+  address: "PA20 9JD",
   email: "saida@gmail.com",
   password: "123456",
-  address: "RE1 READ"
 )
 puts "user created"
 file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263123/zrpl7gqa5ngotoi8dbzf.jpg')
@@ -58,10 +55,9 @@ puts "image uploaded"
 dylan = User.create!(
   first_name: 'Dylan',
   last_name: 'Deehan',
-  address: "E9 5EN",
+  address: "DN22 8DQ",
   email: "dylan@gmail.com",
   password: "123456",
-  address: "RE1 READ"
 )
 puts "user created"
 file = URI.open('https://res.cloudinary.com/duklnvqnn/image/upload/v1670263137/sdmvfvzspxd1bbzzmcpu.png')
