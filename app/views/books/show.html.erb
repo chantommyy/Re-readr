@@ -14,22 +14,21 @@
     <% if @book.user != current_user %>
       <div class="btn-request">
         <%= simple_form_for [@book, @request] do |f| %>
-        <%= f.submit "Swap", class: "btn btn-flat" %>
+          <%= f.submit "Swap", class: "btn btn-flat" %>
+        <% end %>
+        <% else %>
+          <p>You own this book.<p>
         <% end %>
       </div>
-    <% else %>
-    <h1>You own this book.</h1>
-    <% end %>
-    <br>
-    <div class="reviews">
-      <p>Reviews</p>
-      <% unless @reviews.nil? %>
+      <br>
+      <div class="reviews">
+        <p>Reviews</p>
+        <% unless @reviews.nil? %>
         <% @reviews.each do |review| %>
           <p><%= review.comment %></p>
         <% end %>
       <% end %>
-    </div>
+      </div>
     <br>
   </div>
 </div>
-

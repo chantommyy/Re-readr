@@ -4,11 +4,6 @@ $cursor: pointer;
   background-color: #d9eae8;
 }
 
-.back-link{
-  color: #252525;
-  margin-top: 30px;
-}
-
 .container{
   .book-name{
     color: #252525;
@@ -18,12 +13,9 @@ $cursor: pointer;
     font-size: 18px;
   }
 
-
-.book-info{
-  img:last-child {
-    width: 40px;
+  .back-link{
+    color: #252525;
   }
-}
 
   .btn-request{
     margin-left: auto;
@@ -40,13 +32,15 @@ $cursor: pointer;
       font-size: 16px;
       width: 130px;
       height: 45px;
+      margin-top: 20px;
     }
   }
 
   .book-info{
     border-radius: 15px;
-    margin: 10px;
-    background-image: white;
+    margin: 5px;
+    background-color: white;
+    padding: 15px;
 
     .book-cover-img{
       height: 300px;
@@ -64,6 +58,11 @@ $cursor: pointer;
       color: rgb(30, 30, 30);
       font-weight: 200;
       margin: 4px auto;
+      font-size: 14px;
+    }
+
+    img:last-child {
+      width: 40px;
     }
   }
 }
