@@ -1,34 +1,53 @@
 .dashboard-container {
   height: 100vh;
   width: 100vw;
-  background: #4F7D75;
+  background: #D6E5E3;
+  overflow: scroll;
+
+  .completed-swaps-bg{
+    background-color:#45a192;
+  }
 
   .top-card{
-  background-color: #D6E5E3;
-  height: 60px;
+  background-color: #4F7D75;
+  height: 53px;
+  font-weight: 300;
   border-radius: 0 0 30px 30px;
+  color: rgb(51, 51, 51);
+  }
+
+  .Swaps_title{
+    font-family: "Poppins", sans-serif;
+    color:#383838;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
   }
 
   .title {
     text-align: center;
-    font-size: x-large;
+    font-size: 20px;
+    font-weight: 200;
     font-family: "Poppins", sans-serif;
-    color: #505050;
+    color: #ffffff;
     padding-top: 10px;
   }
-  .h4 {
-    font-family: cursive;
-  }
+
+  // .h4 {
+  //   font-family: cursive;
+  //   color: white;
+  // }
+
   ul {
     padding-left: 0;
     li {
       border-radius: 20px;
-      background-color: white;
       display: flex;
       align-items: center;
       list-style: none;
-      padding: 0 24px;
-      height: 142px;
+      padding: 0 35px;
+      height: 115px;
       margin-left: 9px;
       margin-right: 8px;
       justify-content: space-between;
@@ -44,31 +63,36 @@
     }
   }
 
-  .hr{
-    color: lightgray;
+  .swap-text-info{
+    .btn-green {
+      background-color: #4F7D75;
+      font-family: "Poppins";
+      border-radius: 15px;
+      color: rgb(251, 251, 251);
+      font-size: 15px;
+      width: 100%;
+      font-weight: 200;
+    }
   }
 
-  .button {
-    margin-top: 10px;
-    color: rgb(0, 0, 0);
-    padding: 6px 24px;
-    border-radius: 4px;
-    background: #ffffff;
-    transition: background 0.3s ease;
-    text-decoration: none;
-    background-color: #D6E5E3;
-  }
-
-  .Swaps_title{
-    font-family: "Poppins", sans-serif;
-    color:#373737;
-    margin-left:10px;
-  }
+  // .btn-flat {
+  //   margin-top: 10px;
+  //   color: rgb(0, 0, 0);
+  //   padding: 6px 24px;
+  //   border-radius: 4px;
+  //   background: #ffffff;
+  //   transition: background 0.3s ease;
+  //   text-decoration: none;
+  //   background-color: #D6E5E3;
+  // }
 
   .Pending_title{
     font-family: "Poppins", sans-serif;
-    color:#373737;
-    margin-left:10px;
+    color:#2d2d2d;
+    margin-left: 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
   }
 
 }
