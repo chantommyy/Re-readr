@@ -14,6 +14,8 @@
     font-size: x-large;
     font-family: "Poppins", sans-serif;
     color: #505050;
+    padding-top: 10px;
+    padding-left: 50px;
   }
   .h4 {
     font-family: cursive;
@@ -27,7 +29,11 @@
       align-items: center;
       list-style: none;
       padding: 0 24px;
-      height: 120px;
+      height: 142px;
+      margin-left: 9px;
+      margin-right: 8px;
+      justify-content: space-between;
+      margin-bottom: 10px;
       img {
         width: 50px;
         margin-right: 15px;
@@ -46,7 +52,7 @@
   .button {
     margin-top: 10px;
     color: rgb(0, 0, 0);
-    padding: 8px 24px;
+    padding: 6px 24px;
     border-radius: 4px;
     background: #ffffff;
     transition: background 0.3s ease;
@@ -57,11 +63,13 @@
   .Swaps_title{
     font-family: "Poppins", sans-serif;
     color:#373737;
+    margin-left:10px;
   }
 
   .Pending_title{
     font-family: "Poppins", sans-serif;
     color:#373737;
+    margin-left:10px;
   }
 
 }
