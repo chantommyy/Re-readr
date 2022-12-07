@@ -2,10 +2,12 @@
 <%# tells us the name of the data controller eg tabulator %>
 <div class="contents" data-controller="tabulator">
   <div class="tab">
+
     <button data-tabulator-target="booksLink" data-action="click->tabulator#displayBooks">Bookshelf</button>
     <button data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
     <button data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews">Add Review</button>
   </div>
+
   <%# calculate the average rating %>
   <% if @reviews.length > 0 %>
     <% @total = 0 %>
@@ -16,21 +18,31 @@
     <%@averageround =  (@total.to_f / @reviews.length).round(1) %>
   <% end  %>
 
-
-<%# Books tab %>
   <div data-tabulator-target="books" class="tabcontent">
-      <h3>Available Books</h3>
-      <p>Have a look at my wares to be traded!</p>
-      <ul>
+
+    <h3>Available Books</h3>
+    <p>Have a look at my wares to be traded!</p>
+  <%# Bookenator%>
+    <div class="bookcontents" data-controller="bookenator">
+      <%# books show hide below here %>
+      <div class="booktab">
+        <%# create button for each book %>
         <% @user.books.each do |book| %>
-         <li><%= book.name %></li>
-          <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
-          <%= hidden_field_tag "book_id", book.id %>
-          <% end %>
+          <button data-bookenator-target="button" data-action="click->bookenator#displayBook" data-id="<%= book.id %>"><%= book.name %></button>
+        <% end %>
+      </div>
+    <%# all the book/info go under here %>
+      <% @user.books.each do |book| %>
+        <div class="d-none" data-bookenator-target="book" data-id="<%= book.id %>" class="bookcontent">
+          <p><%= book.name %></p>
+        </div>
       <% end %>
-      </ul>
-      <%= link_to "home", root_path %>
+    </div>
+    <%# end of bookenator %>
   </div>
+
+
+<%# end of bookenator %>
 
 <%# Profile tab %>
   <div data-tabulator-target="profile" class="tabcontent">
@@ -67,17 +79,17 @@
             </div>
           </div>
       </div>
-    <div class="review-container layer2">
-      <% @reviews.each do |review| %>
-        <div class="review-card">
-          <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" alt="Avatar" style="width:90px">
-          <span style="text-alight: right"><%= review.user.first_name %></span>
-          <h3><%= review.comment %></h3>
-          <p><%= review.rating %></p>
-          <div class="Stars" style="--rating: <%= review.rating %>;" aria-label="Rating of this product is  <%= review.rating %> out of 5."></div>
-        </div>
-      <% end %>
-    </div>
+      <div class="review-container layer2">
+        <% @reviews.each do |review| %>
+          <div class="review-card">
+            <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" alt="Avatar" style="width:90px">
+            <span style="text-alight: right"><%= review.user.first_name %></span>
+            <h3><%= review.comment %></h3>
+            <p><%= review.rating %></p>
+            <div class="Stars" style="--rating: <%= review.rating %>;" aria-label="Rating of this product is  <%= review.rating %> out of 5."></div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 
@@ -88,12 +100,13 @@
 
   <div data-tabulator-target="reviews">
     <div class="make-review-container">
-    <h2> Add a review </h2>
-    <%=  simple_form_for ([@request, @user, @review]) do |f| %>
-      <%= f.input :rating, :collection => %w[0 1 2 3 4 5]  %>
-      <%= f.input :comment %>
-      <%= f.submit "Submit review", data: { turbo_method: :post } %>
-    <% end %>
+      <h2> Add a review </h2>
+      <%=  simple_form_for ([@request, @user, @review]) do |f| %>
+        <%= f.input :rating, :collection => %w[0 1 2 3 4 5]  %>
+        <%= f.input :comment %>
+        <%= f.submit "Submit review", data: { turbo_method: :post } %>
+      <% end %>
     </div>
   </div>
+</div>
 </div>

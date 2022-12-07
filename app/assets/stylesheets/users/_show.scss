@@ -1,4 +1,10 @@
 // working page
+.book-cover-img {
+  max-width: 300px;
+}
+.form-select {
+  width: 350px;
+}
 
 
 .active {
@@ -61,7 +67,7 @@
     content: "";
     clear: both;
     display: table;
-    padding-bottom: 30px;
+    // padding-bottom: 30px;
 
   }
 
@@ -87,7 +93,7 @@
     margin-bottom: 0px;
   }
 
-  /* Add media queries for responsiveness. This will center both the text and the image inside the review-card */
+  // * Add media queries for responsiveness. This will center both the text and the image inside the review-card */
   @media (max-width: 100%) {
     .review-card {
       text-align: center;
@@ -99,13 +105,14 @@
       display: block;
     }
   }
-
 }
+
 
 // profile container
 .profile-container {
-  $brown: #786450;
+  $brown: #5b5078;
   position: absolute;
+  left: 10%;
   .profile-card {
 
       .center {
@@ -165,7 +172,7 @@
           img {
             display: block;
             border-radius: 50%;
-            background: #F5E8DF;
+            background: #bf601c;
           }
 
           &:hover {
@@ -233,7 +240,7 @@
           transition: all .4s ease-in-out;
 
           &:hover {
-            background: #E1CFC2;
+            background: #c2e1c3;
             cursor: pointer;
           }
 
