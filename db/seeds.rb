@@ -274,7 +274,7 @@ Book.create(name: 'The Wind in the Willows',
   )
 
 Book.create(name: 'Sapiens',
-  genre: 'Romance',
+  genre: 'Nonfiction',
   description: 'Yuval Noah Hararis book, Sapiens traces the origins, mechanisms, and effects of what we think of as “human progress” from small bands of hunter-gatherers 100,000 years ago to the present-day global network through which our species has come to dominate the entire Earth',
   author: 'Yuval Noah Harari',
   user_id:  max.id,
