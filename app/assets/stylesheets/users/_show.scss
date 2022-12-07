@@ -16,6 +16,7 @@ h3{
 p{
   font-weight: 200;
   color: black;
+  padding-top: 5px;
 }
 
 li{
@@ -57,6 +58,10 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 120px;
   }
 
   #new-review{
