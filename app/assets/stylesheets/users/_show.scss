@@ -8,6 +8,9 @@
 
 h3{
   font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 p{
@@ -23,6 +26,25 @@ li{
   width: 100%;
   margin: 30px 10px;
   padding-top: 5px;
+}
+
+.each-tab{
+  border-radius: 7px;
+  margin: 1px;
+  padding: 5px 5px;
+  font-size: 12px;
+  width: 111px;
+  height: 40px;
+  box-shadow: none;
+}
+
+.tabcontent{
+  color: rgb(49, 49, 49);
+  margin: 70px 10px;
+  box-shadow: none;
+  background-color: #D6E5E3;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .make-review-container{
@@ -56,6 +78,7 @@ li{
     color: white;
     margin-bottom: 20px;
     margin-top: 120px;
+    font-size: 20px;
   }
 
   .btn-review-flat{
@@ -70,26 +93,19 @@ li{
     margin-top: 35px;
   }
 
+  .text-alight{
+    font-size: 12px;
   }
 
+  #review_rating{
+    color: black;
+  }
 
-.each-tab{
-  border-radius: 10px;
-  margin: 4px;
-  padding: 5px 5px;
-  font-size: 12px;
-  width: 90px;
-  box-shadow: none;
-}
+  #review_comment{
+    color: black;
+  }
 
-.tabcontent{
-  color: rgb(49, 49, 49);
-  margin: 70px 10px;
-  box-shadow: none;
-  background-color: #D6E5E3;
-  border-radius: 20px;
-  padding: 20px;
-}
+  }
 
 .active {
   background-color: #ebe2bc;
@@ -98,7 +114,7 @@ li{
 // root and stars is needed for star ratings
 :root {
     --star-size: 60px;
-    --star-color: #fff;
+    --star-color: rgb(42, 42, 42);
     --star-background: #fc0;
   }
 
@@ -119,6 +135,8 @@ li{
     background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    left: 23px;
+    bottom: 60px;
   }
 }
 
@@ -148,7 +166,16 @@ li{
     content: "";
     clear: both;
     display: table;
-    // padding-bottom: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    left: 17px;
+
+    .review-comment{
+      text-align: left;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 200;
+    }
 
   }
 
@@ -217,7 +244,7 @@ li{
           max-width: 5px;
           // max-height: 5px;
             // #adjust below to change the star size
-            --star-size: 30px;
+            --star-size: 15px;
             font-size: var(--star-size);
         }
 
@@ -314,7 +341,7 @@ li{
         .box {
           box-sizing: border-box;
           width: 120px;
-          height: 99px;
+          height: 149px;
           background: #2c4642;
           text-align: center;
           padding-top: 28px;
