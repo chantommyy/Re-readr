@@ -39,14 +39,17 @@
         </div>
         <%= image_tag request.book.photo %>
       </li>
+
+      <div style="display: flex; justify-content: center;">
         <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Leave a review
         </button>
-        
+      </div>
+
       <!-- <div style="display: flex; justify-content: center;">
       <%= link_to "Add review", request_user_path(request, request.user), class: 'btn btn-green'%>
       </div> -->
-      
+
       <% end %>
     <% end %>
     <% current_user.requests.each do |request| %>
@@ -58,7 +61,8 @@
           </div>
           <%= image_tag request.swaps[0].book.photo %>
         </li>
-        
+
+      <div style="display: flex; justify-content: center;">
         <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Leave a review
         </button>
@@ -81,11 +85,12 @@
               <% end %>
             </div>
           </div>
-          
+
         <!-- <div style="display: flex; justify-content: center;">
         <%= link_to "Add review", request_user_path(request, request.user), class: 'btn btn-green'%>-->
 
         </div>
+      </div>
       <% end %>
     <% end %>
   </ul>
