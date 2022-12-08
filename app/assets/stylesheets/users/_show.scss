@@ -28,7 +28,6 @@ li{
   width: 100%;
   margin: 30px 10px;
   padding-top: 5px;
-
 }
 
 .each-tab{
@@ -57,6 +56,17 @@ li{
     margin-top: 10px;
   }
 }
+
+
+  // button{
+  //   background-color: red;
+  //   font-family: "Poppins";
+  //   border-radius: 10px;
+  //   color: rgb(255, 255, 255);
+  //   font-size: 15px;
+  // }
+
+
 
 .make-review-container{
   #review_comment{
@@ -191,7 +201,6 @@ li{
       font-size: 16px;
       font-weight: 200;
     }
-
   }
 
   /* Clear floats after containers */
@@ -259,8 +268,6 @@ li{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-
 
         .Stars {
           max-width: 5px;
