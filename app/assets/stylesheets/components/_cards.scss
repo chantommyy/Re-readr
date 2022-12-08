@@ -1,9 +1,16 @@
 $cursor: pointer;
 
+.card-index{
+  background-color: #4F7D75;
+}
+
 .wh-background{
   background-color: #D6E5E3;
-  height: 148px;
-  border-radius: 0 0 30px 30px;
+  height: 77px;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .description{
     height: auto;
@@ -42,7 +49,6 @@ $cursor: pointer;
   background: #ffffff;
   margin: 20px 5px 20px 5px;
   border-radius: 20px;
-  box-shadow: 0px 5px 10px 0px #7cd091;
   padding-top: 2px;
 
   .cover {
