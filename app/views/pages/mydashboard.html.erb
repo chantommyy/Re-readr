@@ -10,7 +10,7 @@
         <li>
           <%= image_tag request.book.photo %>
           <div class="swap-text-info">
-            <p><%= request.user.first_name %> has requested <br> "</strong><%= request.book.name %></strong>"</p>
+            <p><%= request.user.first_name %> has requested "<strong><%= request.book.name %></strong>"</p>
             <%= link_to "See #{request.user.first_name}'s bookshelf", request_user_path(request, request.user), class: 'btn btn-green' %>
             <%# <%= link_to "X", mydashboard_path, class: 'button' %>
           </div>
@@ -21,9 +21,8 @@
       <% if request.swaps.empty? %>
         <li>
           <%= image_tag request.book.photo %>
-          <div>
-            <p>You have requested </p>
-            <p><i><%= request.book.name.first(30) %></i> from <%= request.book.user.first_name %></p>
+          <div class="swap-text-info">
+            <p>You have requested "<strong><%= request.book.name.first(30) %></strong>" from <%= request.book.user.first_name %></p>
           </div>
         </li>
       <% end %>
@@ -36,9 +35,7 @@
       <li>
         <%= image_tag request.swaps[0].book.photo %>
         <div>
-          <p>Please send </p>
-          <p> <strong>"<%= request.book.name[0,30] %>"</strong></p>
-          <p>to <%= request.user.first_name %> at <%= request.user.address %></p>
+          <p>Please send <strong>"<%= request.book.name[0,30] %>"</strong> to <%= request.user.first_name %> at <%= request.user.address %></p>
         </div>
         <%= image_tag request.book.photo %>
       </li>
