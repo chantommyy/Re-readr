@@ -10,28 +10,30 @@
 
   .top-card{
   background-color: #4F7D75;
-  height: 53px;
-  font-weight: 300;
+  height: 60px;
+
+  font-weight: 400;
   border-radius: 0 0 30px 30px;
   color: rgb(51, 51, 51);
   }
 
   .Swaps_title{
     font-family: "Poppins", sans-serif;
-    color:#383838;
-    font-size: 18px;
+    color:#4b4b4b;
+    font-size: 20px;
     text-align: center;
-    font-weight: 400;
-    margin-bottom: 20px;
+    font-weight: 200;
+    margin-bottom: 5px;
+    background-color: #e3f2f1;
   }
 
   .Pending_title{
     font-family: "Poppins", sans-serif;
-    color:#2d2d2d;
-    margin-left: 10px;
+    color:#4b4b4b;
     text-align: center;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 200;
+    font-size: 20px;
+    background-color: #e3f2f1;
   }
 
   .title {
@@ -40,7 +42,7 @@
     font-weight: 200;
     font-family: "Poppins", sans-serif;
     color: #ffffff;
-    padding-top: 10px;
+    padding-top: 15px;
   }
 
   // .h4 {
@@ -50,6 +52,7 @@
 
   ul {
     padding-left: 0;
+
     li {
       border-radius: 20px;
       display: flex;
@@ -58,14 +61,17 @@
       padding: 0 35px;
       height: 115px;
       margin-left: 9px;
-      margin-right: 8px;
       justify-content: space-between;
-      margin-bottom: 10px;
+      margin-bottom: -10px;
+      font-size: 13px;
+
       img {
         width: 50px;
         margin-right: 15px;
         height: 80px;
+        border: solid white 2px;
       }
+
       p {
         margin-bottom: 7px;
       }
@@ -79,7 +85,7 @@
       border-radius: 15px;
       color: rgb(251, 251, 251);
       font-size: 15px;
-      width: 100%;
+      width: 210px;
       font-weight: 200;
     }
   }

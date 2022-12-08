@@ -1,7 +1,7 @@
 <div class="show-page">
   <div class="container">
   <br>
-    <%= link_to "<< Back", books_path, class: "back-link"%>
+    <%= link_to "<", books_path, class: "back-link"%>
 
     <div class="book-info">
       <img src="<%= @book.photo %>" alt="book cover" class="book-cover-img">
@@ -14,10 +14,10 @@
     <% if @book.user != current_user %>
       <div class="btn-request">
         <%= simple_form_for [@book, @request] do |f| %>
-          <%= f.submit "Swap", class: "btn btn-flat" %>
+          <%= f.submit "Swap", class: "btn swap-btn-green" %>
         <% end %>
         <% else %>
-          <p>You own this book.<p>
+          <button class="btn edit-btn-green" style="justify-content: center; background-color: #4F7D75; color: white; display: flex; position: absolute; left: 128px; font-size: 16px; width: 130px; height: 40px; margin-top: -3px;">Edit the book</button>
         <% end %>
       </div>
       <%# <br> %>

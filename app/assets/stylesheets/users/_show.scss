@@ -21,6 +21,7 @@ p{
 
 li{
   font-weight: 200;
+  list-style-type: none;
 }
 
 .tab{
@@ -41,7 +42,6 @@ li{
 
 .tabcontent{
   color: rgb(49, 49, 49);
-  margin: 70px 10px;
   box-shadow: none;
   background-color: #D6E5E3;
   border-radius: 20px;
@@ -173,7 +173,7 @@ li{
     display: table;
     padding-bottom: 30px;
     position: absolute;
-    left: 17px;
+    left: -9px;
 
     .review-comment{
       text-align: left;
@@ -231,7 +231,7 @@ li{
       .center {
         position: absolute;
         top: 65px;
-        left: 25px;
+        left: -2px;
         height: 298px;
         width: 320px;
         background: #fff;
@@ -353,6 +353,7 @@ li{
           text-align: center;
           padding-top: 28px;
           transition: all .4s ease-in-out;
+          align-items: center;
 
           &:hover {
             background: #c2e1c3;
@@ -374,10 +375,12 @@ li{
         .value {
           font-size: 12px;
           font-weight: 200;
+          justify-content: center;
         }
 
         .parameter {
           font-size: 12px;
+          justify-content: center;
         }
 
       }

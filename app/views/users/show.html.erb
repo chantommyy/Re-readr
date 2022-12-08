@@ -23,9 +23,7 @@
 
     <div data-tabulator-target="books" class="tabcontent">
       <h3>Available Books</h3>
-      <p>Click which book you would like to select!</p>
-      <h3>Available Books</h3>
-      <p>Have a look at my wares to be traded!</p>
+      <p>Click which book you would like to select:</p>
       <ul>
         <% @user.books.each do |book| %>
           <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post}, data: {turbo_method: :delete, turbo_confirm: "Are you sure to swap this book?"} do %>
@@ -88,7 +86,18 @@
               </div>
               <div class="box">
                 <span class="parameter">Favourite genre:</span>
-                <span class="value">Crime</span>
+                <% case @user.id %>
+                <% when 1 %>
+                  <span class="value">Crime</span>
+                <% when 2 %>
+                  <span class="value">Romance</span>
+                <% when 3 %>
+                  <span class="value">Scandi Noir</span>
+                <% when 4 %>
+                  <span class="value">Historical Fiction</span>
+                <% else %>
+                  <span class="value">Harry Potter Fan Fiction</span>
+                <% end %>
               </div>
             </div>
           </div>
