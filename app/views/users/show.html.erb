@@ -106,21 +106,8 @@
             </div>
           </div>
         </div>
-
-        <div class="review-container layer2">
-          <% @reviews.each do |review| %>
-            <div class="review-card">
-              <img src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128" alt="Avatar" style="width:90px">
-              <span style="text-alight: right"><%= review.user.first_name %></span>
-              <h3 class="review-comment"><%= review.comment %></h3>
-              <%# <p><%= review.rating</p> %>
-              <div class="Stars" style="--rating: <%= review.rating %>;" aria-label="Rating of this product is  <%= review.rating %> out of 5."></div>
-            </div>
-          <% end %>
-        </div>
       </div>
     </div>
 
   </div>
 </div>
-<div class="navbar-space"></div>

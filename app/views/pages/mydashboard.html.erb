@@ -32,46 +32,25 @@
   <ul class="pending-swaps-bg">
     <% current_user.requests_as_owner.each do |request| %>
       <% if request.swaps.any? %>
-      <li>
-        <%= image_tag request.swaps[0].book.photo %>
-        <div>
-          <p>Please send <strong>"<%= request.book.name[0,30] %>"</strong> to <%= request.user.first_name %> at <%= request.user.address %></p>
-        </div>
-        <%= image_tag request.book.photo %>
-      </li>
-
-      <div style="display: flex; justify-content: center;">
-        <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Leave a review
-        </button>
-      </div>
-
-      <!-- <div style="display: flex; justify-content: center;">
-      <%= link_to "Add review", request_user_path(request, request.user), class: 'btn btn-green'%>
-      </div> -->
-
-      <% end %>
-    <% end %>
-    <% current_user.requests.each do |request| %>
-      <% if request.swaps.any? %>
         <li>
-          <%= image_tag request.book.photo %>
-          <div>
-            <p>Please send <strong><%= request.swaps[0].book.name %></strong> to <%= request.swaps[0].user.first_name %> at <%= request.swaps[0].user.address %></p>
-          </div>
           <%= image_tag request.swaps[0].book.photo %>
+          <div>
+            <p>Please send <strong>"<%= request.book.name[0,30] %>"</strong> to <%= request.user.first_name %> at <%= request.user.address %></p>
+          </div>
+          <%= image_tag request.book.photo %>
         </li>
 
-      <div style="display: flex; justify-content: center;">
-        <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Leave a review
-        </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div style="display: flex; justify-content: center;">
+          <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            Leave a review
+          </button>
+        </div>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModal1Label" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <%= simple_form_for [request, request.swaps[0].user, @review] do |f| %>
+              <%= simple_form_for [request, request.user, @review] do |f| %>
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Leave a review</h1>
+                  <h1 class="modal-title fs-5" id="exampleModal1Label">Leave a review</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -85,14 +64,45 @@
               <% end %>
             </div>
           </div>
-
-        <!-- <div style="display: flex; justify-content: center;">
-        <%= link_to "Add review", request_user_path(request, request.user), class: 'btn btn-green'%>-->
-
         </div>
-      </div>
+      <% end %>
+    <% end %>
+    <% current_user.requests.each do |request| %>
+      <% if request.swaps.any? %>
+        <li>
+          <%= image_tag request.book.photo %>
+          <div>
+            <p>Please send <strong><%= request.swaps[0].book.name %></strong> to <%= request.swaps[0].user.first_name %> at <%= request.swaps[0].user.address %></p>
+          </div>
+          <%= image_tag request.swaps[0].book.photo %>
+        </li>
+
+        <div style="display: flex; justify-content: center;">
+          <button type="button" class="btn btn-green" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Leave a review
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <%= simple_form_for [request, request.swaps[0].user, @review] do |f| %>
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Leave a review</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <%= f.input :rating %>
+                      <%= f.input :comment %>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn secondary-btn" data-bs-dismiss="modal">Close</button>
+                    <%= f.submit "Save Changes", class: "btn btn-green" %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
     <% end %>
   </ul>
 </div>
-<div class="navbar-space"></div>
