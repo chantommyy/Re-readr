@@ -36,7 +36,7 @@
           <% end %> -->
 
           <% @user.books.each do |book| %>
-            <div class="">
+            <div class="available-book-img">
               <li data-action="click->bookenator#toggleInfo"><img src="<%= book.photo %>" alt="<%= book.name %>" style="max-width:200px;"></li>
               <div class="d-none">
                 <p><%= book.name %></p>

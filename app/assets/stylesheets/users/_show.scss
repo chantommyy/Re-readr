@@ -28,24 +28,34 @@ li{
   width: 100%;
   margin: 30px 10px;
   padding-top: 5px;
+
 }
 
 .each-tab{
   border-radius: 7px;
   margin: 1px;
+  margin-left: 11px;
   padding: 5px 5px;
   font-size: 12px;
-  width: 111px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   box-shadow: none;
 }
 
 .tabcontent{
   color: rgb(49, 49, 49);
   box-shadow: none;
-  background-color: #D6E5E3;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .available-book-img{
+    margin-top: 10px;
+  }
 }
 
 .make-review-container{
@@ -128,7 +138,7 @@ li{
   // margin
   --percent: calc(var(--rating) / 5 * 100%);
 
-  display: inline-block;
+  display: inline;
   // commented out below to change size, root contains star size and colour
   // font-size: var(--star-size);
   font-family: Times; // make sure ★ appears correctly
@@ -245,6 +255,13 @@ li{
         width: 200px;
         height: 320px;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+
+
         .Stars {
           max-width: 5px;
           // max-height: 5px;
@@ -351,9 +368,10 @@ li{
           height: 149px;
           background: #2c4642;
           text-align: center;
-          padding-top: 28px;
-          transition: all .4s ease-in-out;
+          display: flex;
+          justify-content: center;
           align-items: center;
+          flex-direction: column;
 
           &:hover {
             background: #c2e1c3;
