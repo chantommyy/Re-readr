@@ -19,9 +19,7 @@
           <p>Subject: <%= book.genre %></p>
         </div>
         <h2 class="card-book-pricing"><%=  %></h2>
-        <%= link_to request_user_path(:request_id, :user) do %>
           <%= cl_image_tag book.user.avatar.key, class:"card-book-user avatar-bordered" %>
-          <% end %>
         </div>
       </div>
     <% end %>
