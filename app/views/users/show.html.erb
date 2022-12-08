@@ -39,7 +39,7 @@
             <li data-action="click->bookenator#toggleInfo"><img src="<%= book.photo %>" alt="<%= book.name %>" style="max-width:200px;"></li>
             <div class="d-none">
               <p><%= book.name %></p>
-              <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
+              <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post}, data: {turbo_method: :delete, turbo_confirm: "Are you sure to swap this book?"} do %>
                 <span>Request Swap</span>
                 <%= hidden_field_tag "book_id", book.id %>
               <% end %>
