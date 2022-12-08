@@ -6,13 +6,15 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   z-index: 10;
   display: flex;
   justify-content: space-around;
+  height: 70px;
+
   .card-book-user{
-    width: 30px
+    width: 30px;
   }
 }
 
