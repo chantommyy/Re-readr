@@ -39,7 +39,9 @@
         </div>
         <%= image_tag request.book.photo %>
       </li>
+      <div style="display: flex; justify-content: center;">
       <%= link_to "Add review", request_user_path(request, request.user), class: 'btn btn-green'%>
+      </div>
       <% end %>
     <% end %>
     <% current_user.requests.each do |request| %>
@@ -47,13 +49,13 @@
         <li>
           <%= image_tag request.book.photo %>
           <div>
-            <p>Please send </p>
-            <p><i><%= request.swaps[0].book.name %></i> </p>
-            <p>to <%= request.swaps[0].user.first_name %> at <%= request.swaps[0].user.address %></p>
+            <p>Please send <strong><%= request.swaps[0].book.name %></strong> to <%= request.swaps[0].user.first_name %> at <%= request.swaps[0].user.address %></p>
           </div>
           <%= image_tag request.swaps[0].book.photo %>
         </li>
-        <%= link_to "Add Review", request_user_path(request, request.user), class: 'btn btn-green'%>
+        <div style="display: flex; justify-content: center;">
+        <%= link_to "Add review", request_user_path(request, request.user), class: 'btn btn-green'%>
+        </div>
       <% end %>
     <% end %>
   </ul>
