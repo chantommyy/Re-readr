@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
-    @books = Book.all.reverse
+    @books = Book.all.reject { |b| Swap.where(book: b).any? || Swap.select { |s| s.request.book == b }.any? }.reverse
   end
 
   def show
