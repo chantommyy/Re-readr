@@ -86,7 +86,18 @@
               </div>
               <div class="box">
                 <span class="parameter">Favourite genre:</span>
-                <span class="value">Crime</span>
+                <% case @user.id %>
+                <% when 1 %>
+                  <span class="value">Crime</span>
+                <% when 2 %>
+                  <span class="value">Romance</span>
+                <% when 3 %>
+                  <span class="value">Scandi Noir</span>
+                <% when 4 %>
+                  <span class="value">Historical Fiction</span>
+                <% else %>
+                  <span class="value">Harry Potter Fan Fiction</span>
+                <% end %>
               </div>
             </div>
           </div>
