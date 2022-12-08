@@ -121,19 +121,6 @@
       </div>
     </div>
 
-    <%# Reviews tab %>
-
-    <div data-tabulator-target="reviews">
-      <div class="make-review-container">
-      <h2 class="add-review"> Add a review </h2>
-        <%=  simple_form_for ([@request, @user, @review]) do |f| %>
-          <%= f.input :rating, :collection => %w[0 1 2 3 4 5]  %>
-          <%= f.input :comment %>
-          <%= f.submit "Submit review", class: "btn btn-review-flat", data: { turbo_method: :post } %>
-        <% end %>
-      </div>
-    </div>
-
   </div>
 </div>
 <div class="navbar-space"></div>
