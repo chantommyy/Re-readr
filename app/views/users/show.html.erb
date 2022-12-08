@@ -26,8 +26,8 @@
       <p>Click which book you would like to select:</p>
       <ul>
         <% @user.books.each do |book| %>
-          <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
-            <li><img src="<%= book.photo %>" alt="<%= book.name %>" style="display:flex; max-width:200px;"></li>
+          <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post}, data: {turbo_method: :delete, turbo_confirm: "Are you sure to swap this book?"} do %>
+            <li><img src="<%= book.photo %>" alt="<%= book.name %>" style="max-width:200px;"></li>
             <%= hidden_field_tag "book_id", book.id %>
           <% end %>
         <% end %>
