@@ -9,11 +9,17 @@ require 'open-uri'
 # require 'faker'
 # require "json"
 # require "rest-client"
-puts 'deleting'
+puts 'deleting reviews'
+Review.destroy_all
+puts 'deleting swaps'
+Swap.destroy_all
+puts 'deleting requests'
 Request.destroy_all
+puts 'deleting books'
 Book.destroy_all
+puts 'deleting users'
 User.destroy_all
-puts 'creating'
+puts 'creating everyone again'
 # the faker name gives out a first name and last name, so i split it to only give first or last name
 
 tommy = User.create!(
