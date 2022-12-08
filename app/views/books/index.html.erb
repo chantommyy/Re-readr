@@ -13,7 +13,7 @@
       <div class="card-book-infos">
         <div>
           <h2><%= book.name %></h2>
-          <p>Author: <%= book.author.empty? ? "unknown" : book.author %></p>
+          <p>Author: <%= book.author.empty? ? "unknown" : book.author.gsub(/"|\[|\]/, '').split(',').reverse.join(" ").lstrip  %></p>
           <p>Subject: <%= book.genre %></p>
         </div>
         <h2 class="card-book-pricing"><%=  %></h2>

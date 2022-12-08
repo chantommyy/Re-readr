@@ -7,9 +7,9 @@
       <button class="each-tab" data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
       <button class="each-tab" data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews">Add Review</button>
     </div>
-    
+
     <%# calculate the average rating %>
-    
+
     <% if @reviews.length > 0 %>
       <% @total = 0 %>
       <% @reviews.each do |review| %>
@@ -18,9 +18,9 @@
       <% @average = (@total.to_f / @reviews.length) %>
       <% @averageround = (@total.to_f / @reviews.length).round(1) %>
     <% end %>
-    
+
     <%# Book tab %>
-    
+
     <div data-tabulator-target="books" class="tabcontent">
       <h3>Available Books</h3>
       <p>Click which book you would like to select!</p>
