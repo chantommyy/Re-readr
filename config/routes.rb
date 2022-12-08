@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   end
   resources :requests, except: :create do
     resources :users, only: :show do
-      resources :swaps, only: :create
       resources :reviews, only: [:new, :create, :destroy]
+      resources :swaps, only: :create
     end
   end
 end
