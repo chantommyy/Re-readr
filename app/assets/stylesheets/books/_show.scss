@@ -2,6 +2,7 @@ $cursor: pointer;
 
 .show-page{
   background-color: #d9eae8;
+  overflow: scroll;
 }
 
 .container{
@@ -15,6 +16,12 @@ $cursor: pointer;
 
   .back-link{
     color: #252525;
+    text-decoration: none;
+    font-size: 30px;
+    position: absolute;
+    z-index: 1;
+    left: 34px;
+    top: 34px;
   }
 
   .btn-request{
@@ -22,17 +29,17 @@ $cursor: pointer;
     margin-right: auto;
     justify-content: center;
 
-    .btn-flat{
+    .swap-btn-green{
       display: flex;
       justify-content: center;
       background-color: #4F7D75;
       color: white;
-      left: 119px;
+      left: 128px;
       position: absolute;
       font-size: 16px;
       width: 130px;
       height: 45px;
-      margin-top: 20px;
+      margin-top: -9px;
     }
   }
 
@@ -41,6 +48,8 @@ $cursor: pointer;
     margin: 22px 5px 5px 5px;
     background-color: white;
     padding: 15px;
+    position: relative;
+    top: -20px;
 
     .book-cover-img{
       height: 300px;
