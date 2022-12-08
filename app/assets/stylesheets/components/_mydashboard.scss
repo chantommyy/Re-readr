@@ -55,7 +55,7 @@
 
     li {
       border-radius: 20px;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       list-style: none;
       padding: 0 35px;
@@ -90,6 +90,19 @@
     }
   }
 
+  .pending-swaps-bg{
+    .btn-green {
+      background-color: #4F7D75;
+      font-family: "Poppins";
+      border-radius: 15px;
+      color: rgb(251, 251, 251);
+      font-size: 15px;
+      width: 150px;
+      font-weight: 200;
+
+    }
+  }
+
   // .btn-flat {
   //   margin-top: 10px;
   //   color: rgb(0, 0, 0);
@@ -101,4 +114,23 @@
   //   background-color: #D6E5E3;
   // }
 
+}
+
+.pending-swaps-bg {
+  .btn-green {
+    background-color: #4F7D75;
+    font-family: "Poppins";
+    border-radius: 15px;
+    color: rgb(251, 251, 251);
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+  .secondary-btn {
+    background-color: #FFF;
+    color: #4F7D75;
+    border-radius: 15px;
+    border: 2px solid #4F7D75;
+    height: 36.48px;
+  }
 }

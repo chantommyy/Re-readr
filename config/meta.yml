@@ -1,0 +1,5 @@
+meta_product_name: "Re:readr"
+meta_title: "Re:readr | Swap your old books "
+meta_description: "Browse nearby books and swipe up the books you like"
+meta_image: "/app/assets/images/rereadr.png" # should exist in `app/assets/images/`
+twitter_account: "@rereadr" # required for Twitter Cards

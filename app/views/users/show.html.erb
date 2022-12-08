@@ -5,7 +5,6 @@
     <div class="tab">
       <button class="each-tab" data-tabulator-target="booksLink" data-action="click->tabulator#displayBooks">Bookshelf</button>
       <button class="each-tab" data-tabulator-target="profileLink" data-action="click->tabulator#displayProfile">Profile</button>
-      <button class="each-tab" data-tabulator-target="reviewsLink" data-action="click->tabulator#displayReviews">Add Review</button>
     </div>
 
     <%# calculate the average rating %>
@@ -21,15 +20,31 @@
 
     <%# Book tab %>
 
-    <div data-tabulator-target="books" class="tabcontent">
+    <div data-controller="bookenator" data-tabulator-target="books" class="tabcontent">
+    <!--
       <h3>Available Books</h3>
-      <p>Click which book you would like to select:</p>
+      <p>Click which book you would like to select!</p>
+      <h3>Available Books</h3>
+      <p>Have a look at my wares to be traded!</p>
       <ul>
         <% @user.books.each do |book| %>
           <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post}, data: {turbo_method: :delete, turbo_confirm: "Are you sure to swap this book?"} do %>
             <li><img src="<%= book.photo %>" alt="<%= book.name %>" style="max-width:200px;"></li>
             <%= hidden_field_tag "book_id", book.id %>
           <% end %>
+        <% end %> -->
+
+        <% @user.books.each do |book| %>
+          <div class="">
+            <li data-action="click->bookenator#toggleInfo"><img src="<%= book.photo %>" alt="<%= book.name %>" style="max-width:200px;"></li>
+            <div class="d-none">
+              <p><%= book.name %></p>
+              <%= button_to request_user_swaps_path(@request, @user), data: {turbo_method: :post} do %>
+                <span>Request Swap</span>
+                <%= hidden_field_tag "book_id", book.id %>
+              <% end %>
+            </div>
+          </div>
         <% end %>
       </ul>
     </div>
@@ -86,18 +101,7 @@
               </div>
               <div class="box">
                 <span class="parameter">Favourite genre:</span>
-                <% case @user.id %>
-                <% when 1 %>
-                  <span class="value">Crime</span>
-                <% when 2 %>
-                  <span class="value">Romance</span>
-                <% when 3 %>
-                  <span class="value">Scandi Noir</span>
-                <% when 4 %>
-                  <span class="value">Historical Fiction</span>
-                <% else %>
-                  <span class="value">Harry Potter Fan Fiction</span>
-                <% end %>
+                <span class="value">Crime</span>
               </div>
             </div>
           </div>
@@ -132,3 +136,4 @@
 
   </div>
 </div>
+<div class="navbar-space"></div>

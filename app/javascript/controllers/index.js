@@ -10,5 +10,8 @@ application.register("bookenator", BookenatorController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import ReviewanatorController from "./reviewanator_controller"
+application.register("reviewanator", ReviewanatorController)
+
 import TabulatorController from "./tabulator_controller"
 application.register("tabulator", TabulatorController)

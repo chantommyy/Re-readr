@@ -1,20 +1,21 @@
+<div class="" style="height: 70px"></div>
 <div id='hidding' class="navbar hide-navigation-item">
-      <%= link_to "/books/new" do %>
-        <i class="fa-solid fa-circle-plus"></i>
-      <% end %>
-      <%= link_to "/books" do %>
-        <i class="fa-solid fa-book"></i>
-      <% end %>
-      <%= link_to "/mydashboard" do %>
-        <i class="fa-solid fa-right-left"></i>
-      <% end %>
-      <%if user_signed_in? %>
-      <%= link_to edit_user_registration_path do %>
-        <%= cl_image_tag current_user.avatar.key, class:"card-book-user avatar-bordered" %>
-        <% end %>
-      <% else %>
-      <%= link_to new_user_session_path do %>
-      <i class="fa-solid fa-user"></i>
-      <% end %>
+  <%= link_to "/books/new" do %>
+    <i class="fa-solid fa-circle-plus"></i>
+  <% end %>
+  <%= link_to "/books" do %>
+    <i class="fa-solid fa-book"></i>
+  <% end %>
+  <%= link_to "/mydashboard" do %>
+    <i class="fa-solid fa-right-left"></i>
+  <% end %>
+  <%if user_signed_in? %>
+    <%= link_to edit_user_registration_path do %>
+      <%= cl_image_tag current_user.avatar.key, class:"card-book-user avatar-bordered" %>
     <% end %>
+  <% else %>
+    <%= link_to new_user_session_path do %>
+      <i class="fa-solid fa-user"></i>
+    <% end %>
+  <% end %>
 </div>

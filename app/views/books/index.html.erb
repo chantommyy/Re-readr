@@ -1,28 +1,32 @@
-<div class="card-index">
-  <div class="wh-background">
-    <div class="description d-flex align-items-center justify-content-center">
-      <%= image_tag "logo-black.png", class: "img-logo-sm d-flex align-items-center justify-content-center" %>
-      <%# <p>Browse books other people want to exchange. Tap when you see a book you like to swap.</p> %>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <% @books.each do |book| %>
-    <div class="card-book">
-      <%= link_to book_path(book) do %>
-        <img src="<%= book.photo %>" alt="book cover" class="cover">
-      <% end %>
-      <div class="card-book-infos">
-        <div>
-          <h2><%= book.name %></h2>
-          <p>Author: <%= book.author.empty? ? "unknown" : book.author.gsub(/"|\[|\]/, '').split(',').reverse.join(" ").lstrip  %></p>
-          <p>Subject: <%= book.genre %></p>
-        </div>
-        <h2 class="card-book-pricing"><%=  %></h2>
-        <%= link_to request_user_path(:request_id, :user) do %>
-          <%= cl_image_tag book.user.avatar.key, class:"card-book-user avatar-bordered" %>
-        <% end %>
+<div class="green-background">
+  <div class="card-index">
+    <div class="wh-background">
+      <div class="description d-flex align-items-center justify-content-center">
+        <%= image_tag "logo-black.png", class: "img-logo-sm d-flex align-items-center justify-content-center" %>
+        <%# <p>Browse books other people want to exchange. Tap when you see a book you like to swap.</p> %>
       </div>
     </div>
-  <% end %>
+  </div>
+  <div class="container">
+    <% @books.each do |book| %>
+      <div class="card-book">
+        <%= link_to book_path(book) do %>
+          <img src="<%= book.photo %>" alt="book cover" class="cover">
+        <% end %>
+        <div class="card-book-infos">
+          <div>
+            <h2><%= book.name %></h2>
+            <p>Author: <%= book.author.empty? ? "unknown" : book.author.gsub(/"|\[|\]/, '').split(',').reverse.join(" ").lstrip  %></p>
+            <p>Subject: <%= book.genre %></p>
+          </div>
+          <h2 class="card-book-pricing"><%=  %></h2>
+          <%= link_to request_user_path(:request_id, :user) do %>
+            <%= cl_image_tag book.user.avatar.key, class:"card-book-user avatar-bordered" %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="navbar-space"></div>
 </div>

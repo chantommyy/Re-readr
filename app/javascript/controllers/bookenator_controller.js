@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["button", "book", "book4Link", "book13Link"]
   connect() {
+    console.log("hi")
     // this.displayBook1()
   }
 
@@ -35,6 +36,11 @@ export default class extends Controller {
     this.book4Target.classList.add("d-none")
     this.book4LinkTarget.classList.remove("active")
 
+  }
+
+  toggleInfo(event) {
+    // console.log(event.currenTarget.nextElementSibling)
+    event.currentTarget.nextElementSibling.classList.toggle('d-none')
   }
 
 }
