@@ -26,7 +26,7 @@ li{
 
 .tab{
   width: 100%;
-  margin: 30px 10px;
+  margin: 29px 15px;
   padding-top: 5px;
 }
 
@@ -35,7 +35,7 @@ li{
   margin: 1px;
   margin-left: 11px;
   padding: 5px 5px;
-  font-size: 12px;
+  font-size: 14px;
   width: 150px;
   height: 50px;
   box-shadow: none;
@@ -181,24 +181,24 @@ li{
 
 
   .review-card {
-    border: 2px solid #ccc;
-    background-color: #eee;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 16px;
     margin: 16px 0;
     height: 150px;
-    width: 330px;
+    width: 315px;
     content: "";
     clear: both;
     display: table;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     // position: absolute;
-    left: -9px;
+    left: 4px;
 
     .review-comment{
       text-align: left;
       margin-top: 20px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 200;
     }
   }
@@ -220,7 +220,7 @@ li{
 
   /* Increase the font-size of a span element */
   .review-card span {
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 0px;
     margin-bottom: 0px;
   }
@@ -244,7 +244,10 @@ li{
 .profile-container {
   $brown: #ffffff;
   position: absolute;
-  left: 10%;
+  left: 38px;
+  top: 57px;
+
+
   .profile-card {
 
       .center {
@@ -264,10 +267,12 @@ li{
         width: 200px;
         height: 320px;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+
+        .parameter {
+          font-size: 12px;
+          font-weight: 200;
+          justify-content: center;
+        }
 
         .Stars {
           max-width: 5px;
@@ -400,11 +405,6 @@ li{
         .value {
           font-size: 12px;
           font-weight: 200;
-          justify-content: center;
-        }
-
-        .parameter {
-          font-size: 12px;
           justify-content: center;
         }
 

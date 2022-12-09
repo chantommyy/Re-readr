@@ -10,8 +10,7 @@
 
   .top-card{
   background-color: #4F7D75;
-  height: 60px;
-
+  height: 70px;
   font-weight: 400;
   border-radius: 0 0 30px 30px;
   color: rgb(51, 51, 51);
@@ -42,7 +41,7 @@
     font-weight: 200;
     font-family: "Poppins", sans-serif;
     color: #ffffff;
-    padding-top: 15px;
+    padding-top: 20px;
   }
 
   // .h4 {
@@ -145,12 +144,9 @@
 
   }
 
+  .modal-footer{
+    display: flex;
+    justify-content: center;
+  }
 
-  // .integer{
-  //   margin-bottom: 20px;
-  // }
-
-  // .string{
-  //   margin-bottom: 20px;
-  // }
 }
