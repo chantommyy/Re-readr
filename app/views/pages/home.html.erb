@@ -1,12 +1,14 @@
 <div class="landing">
-  <div class="container d-flex flex-column align-content-center justify-content-center">
-  <div class="logo-text d-flex flex-column align-content-center align-self-center">
-      <%= image_tag "logo-black.png", class: "img-logo align-self-center" %>
-      <%# <h1 class="logo">re:readr</h1> %>
-      <h4 class="slogan">Browse books other people want to exchange. Tap when you see a book <br>you would like to swap.</h4>
-      <br>
-  </div>
-    <%= link_to "Turn the page", new_book_path, class: "btn btn-green text-white fs-5 p-3 align-self-center" %>
+  <div class="container">
+    <div class="logo-text">
+        <%= image_tag "logo-black.png", class: "img-logo align-self-center" %>
+        <%# <h1 class="logo">re:readr</h1> %>
+        <h4 class="slogan">Browse books other people want to exchange. Tap when you see a book <br>you would like to swap.</h4>
+        <br>
+    </div>
+    <div class="my-button-center">
+      <%= link_to "Turn the page", new_book_path, class: "btn-btn btn-green text-white fs-5 p-3 text-center" %>
+    </div>
     <%= image_tag "rereadr.gif", class: "img-gif align-self-center" %>
   </div>
 </div>

@@ -3,6 +3,8 @@ $cursor: pointer;
 .show-page{
   background-color: #d9eae8;
   overflow: scroll;
+  width: 100vw;
+  height: 100vh;
 }
 
 .container{
@@ -30,16 +32,17 @@ $cursor: pointer;
     justify-content: center;
 
     .swap-btn-green{
-      display: flex;
       justify-content: center;
       background-color: #4F7D75;
       color: white;
-      left: 128px;
-      position: absolute;
       font-size: 16px;
       width: 130px;
       height: 45px;
-      margin-top: -9px;
+      font-weight: 200;
+      text-decoration: none;
+      display: block;
+      margin: 0 auto;
+      position: relative;
     }
   }
 

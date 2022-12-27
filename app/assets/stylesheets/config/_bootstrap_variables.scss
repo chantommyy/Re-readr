@@ -23,3 +23,11 @@ $warning:    $orange;
 // $border-radius-sm: 2px;
 
 // Override other variables below!
+
+body{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-items: start;
+}

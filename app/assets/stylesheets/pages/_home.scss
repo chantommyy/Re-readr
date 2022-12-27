@@ -1,7 +1,8 @@
 // Specific CSS for your home-page
+
 .landing {
   background: #ffffff;
-  height: 844px;
+  // height: 844px;
   width: 390px;
   border-top: 0;
   // vertical-align: bottom;
@@ -15,8 +16,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  // height: 100vh;
   overflow: scroll;
+
 
   // .logo{
   //   font-family: $headers-font;
@@ -33,13 +35,18 @@
     background-color: #4F7D75;
     font-family: "Poppins";
     border-radius: 10px;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 15px;
     width: 50%;
     font-weight: 200;
     position: absolute;
     z-index: 1;
-    top: 328px;
+    top: -30px;
+    margin: 0 auto;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    position: relative;
   }
 
   .btn-green:hover{
@@ -49,23 +56,24 @@
   .logo-text{
     background-color: #D6E5E3;
     position: relative;
-    top: -1px;
     border-radius: 0 0 40% 40%;
-    height: 393px;
-    margin-top: -100px;
+    height: 360px;
     padding-top: 0;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
     .img-logo{
       width: 150px;
       align-self: center;
-      margin-top: 60px;
     }
 
     .img-gif{
-      width: 350px;
-      margin-top: 34px;
+      width: 351px;
+      margin: 0 auto;
+      position: relative;
+      left: 18px;
     }
 
     .slogan{
@@ -77,6 +85,9 @@
     }
   }
 
+  @media screen and (min-width: 1280px) , screen and (max-width: 1920px) {
+    #yourID{  overflow-x: auto; overflow-y: auto; }
+}
 
 
 // body.homepage #navigation-top {
