@@ -1,8 +1,8 @@
-.add-page-bg{
+.add-page-bg {
   background-color: #d9eae8;
 }
 
-.add-content{
+.add-content {
   top: 90px;
   position: absolute;
 }
@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.gif-book{
+.gif-book {
   width: 200px;
   display: inline-block;
   top: 50px;
@@ -37,30 +37,26 @@
   color: #2c2c2c;
 }
 
-.firstLine{
+.firstLine {
   font-size: 30px;
   color: #2c2c2c;
   font-weight: 200;
 }
 
-#book_barcode{
+#book_barcode {
   border-radius: 25px;
-  border: solid 2px #4F7D75;
-  // background: transparent;
+  border: solid 2px #4f7d75;
   width: 300px;
   height: 40px;
   padding: 10px 20px;
-  // position: absolute;
-  // bottom: 340px;
-  // left: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 3%;
 }
 
-.btn-add-flat{
-  background-color: #4F7D75;
+.btn-add-flat {
+  background-color: #4f7d75;
   display: inline-block;
   justify-content: center;
   align-items: center;
@@ -70,7 +66,7 @@
   color: white;
 }
 
-.btn-add-flat:hover{
+.btn-add-flat:hover {
   background-color: #29433e;
 }
 

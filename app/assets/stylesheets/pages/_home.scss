@@ -2,37 +2,18 @@
 
 .landing {
   background: #ffffff;
-  // height: 844px;
   width: 390px;
   border-top: 0;
-  // vertical-align: bottom;
 }
-
-// .pb-5{
-//   padding-bottom: 9rem !important;
-// }
 
 .container {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  // height: 100vh;
   overflow: scroll;
 
-
-  // .logo{
-  //   font-family: $headers-font;
-  //   font-weight: 200;
-  //   font-size: 45px;
-  //   text-align: center;
-  //   color: white;
-  //   text-align: center;
-  //   margin-top: -150px;
-  //   width: 100%;
-  // }
-
-  .btn-green{
-    background-color: #4F7D75;
+  .btn-green {
+    background-color: #4f7d75;
     font-family: "Poppins";
     border-radius: 10px;
     color: white;
@@ -49,48 +30,46 @@
     position: relative;
   }
 
-  .btn-green:hover{
+  .btn-green:hover {
     background-color: #253d39;
   }
 
-  .logo-text{
-    background-color: #D6E5E3;
+  .logo-text {
+    background-color: #d6e5e3;
     position: relative;
     border-radius: 0 0 40% 40%;
     padding-top: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-    .img-logo{
-      width: 150px;
-      align-self: center;
-    }
-
-    .img-gif{
-      width: 351px;
-      margin: 0 auto;
-      position: relative;
-      left: 18px;
-    }
-
-    .slogan{
-      color: #282828;
-      text-align: center;
-      font-size: 17px;
-      margin: 24px 0;
-      font-weight: 200;
-      position: relative;
-      top: -17px;
-    }
   }
 
-  @media screen and (min-width: 1280px) , screen and (max-width: 1920px) {
-    #yourID{  overflow-x: auto; overflow-y: auto; }
+  .img-logo {
+    width: 150px;
+    align-self: center;
+  }
+
+  .img-gif {
+    width: 351px;
+    margin: 0 auto;
+    position: relative;
+    left: 18px;
+  }
+
+  .slogan {
+    color: #282828;
+    text-align: center;
+    font-size: 17px;
+    margin: 24px 0;
+    font-weight: 200;
+    position: relative;
+    top: -17px;
+  }
 }
 
-
-// body.homepage #navigation-top {
-//   display: none !important;
-//  }
+@media screen and (min-width: 1280px), screen and (max-width: 1920px) {
+  #yourID {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+}
