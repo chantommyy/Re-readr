@@ -77,27 +77,6 @@ class BooksController < ApplicationController
     end
   end
 
-    # response = RestClient.get("https://www.googleapis.com/books/v1/volumes?q=#{book_params["barcode"]}&key=#{ENV["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"]}")
-
-    # repos = JSON.parse(response)
-    # book = repos["book"]
-    # @book = Book.new(
-    #   barcode: "identifier",
-    #   name: "title",
-    #   author: "authors" ? "authors" : "unknown author",
-    #   photo: "imageLinks[1]",
-    #   description: "description",
-    #   # genre: "subjects" ? book["subjects"][0] : "Thriller",
-    #   user_id: current_user.id
-    # )
-
-    # if @book.save
-    #   redirect_to books_path(@book)
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
-# end
-
   def update
     @book.update(book_params)
     redirect_to book_path(@book)
