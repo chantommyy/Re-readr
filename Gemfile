@@ -7,6 +7,7 @@ gem "cloudinary"
 
 gem 'json', '~> 2.6', '>= 2.6.3'
 gem 'googlebooks', '~> 0.0.9'
+
 gem 'open-uri', '~> 0.3.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

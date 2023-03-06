@@ -39,7 +39,6 @@ class BooksController < ApplicationController
   #   end
   # end
 
-  # TESTING
   def create
     @book = Book.new(book_params)
     url = "https://www.googleapis.com/books/v1/volumes?q=isbn:#{@book.barcode}"
@@ -63,9 +62,11 @@ class BooksController < ApplicationController
   end
 
   def api_hash
-    @repos["items"].select{ |item| item["volumeInfo"]["imageLinks"]["thumbnail"].gsub("zoom=1", "zoom=0") }
+    @repos["items"].select{ |item| item["volumeInfo"]["imageLinks"]["thumbnail"].gsub("zoom=0", "zoom=3") }
   end
 
+  # https://books.google.com/books/publisher/content/images/frontcover/\(bookImgId)?fife=w400-h600&source=gbs_api
+  # ?fife=w400-h600
 
   def find_image
     images = api_hash["imageLinks"]
