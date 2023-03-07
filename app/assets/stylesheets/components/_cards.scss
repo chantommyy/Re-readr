@@ -1,18 +1,18 @@
 $cursor: pointer;
 
-.card-index{
-  background-color: #4F7D75;
+.card-index {
+  background-color: #4f7d75;
 }
 
-.wh-background{
-  background-color: #D6E5E3;
+.wh-background {
+  background-color: #d6e5e3;
   height: 77px;
   border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .description{
+  .description {
     height: auto;
     background-size: 100% 100%;
     background-position: top center;
@@ -23,7 +23,7 @@ $cursor: pointer;
     flex-direction: column;
     position: absolute;
 
-    p{
+    p {
       color: rgb(80, 80, 80);
       text-align: center;
       font-family: "Poppins";
@@ -34,7 +34,7 @@ $cursor: pointer;
       // left: 7px;
     }
 
-    .img-logo-sm{
+    .img-logo-sm {
       width: 80px;
       left: 170px;
       margin: 0 auto;
@@ -44,7 +44,7 @@ $cursor: pointer;
   }
 }
 
-.card-book{
+.card-book {
   // overflow: hidden;
   background: #ffffff;
   margin: 20px 5px 20px 5px;
@@ -64,50 +64,98 @@ $cursor: pointer;
   }
 }
 
-.card-book:hover{
+.card-book:hover {
   transform: translateY(-5px);
   box-shadow: 0px 10px 20px 2px rgba(33, 109, 43, 0.7);
 }
 
-.logo{
+.logo {
   width: 70px;
   justify-content: center;
 }
 
-.card-book{
-  h2{
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
+.card-book {
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
   }
 }
 
-.card-book p{
+.card-book p {
   font-size: 12px;
-  opacity: .7;
+  opacity: 0.7;
   margin: 0;
 }
 
 .card-book {
-  .card-book-infos{
+  .card-book-infos {
     padding: 16px;
     display: flex;
     justify-content: space-between;
     border-radius: 10px;
-    background-color: #D6E5E3;
+    background-color: #d6e5e3;
     font-family: "Poppins";
-    color: #2D3319;
+    color: #2d3319;
     align-items: flex-end;
     position: relative;
   }
 }
 
-.card-book-infos{
-  .card-book-user{
+.card-book-infos {
+  .card-book-user {
     position: absolute;
     right: 16px;
     top: 20px;
     width: 40px;
     margin-top: 14.5px;
   }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: unset;
+  }
+
+  //   .card-book {
+  //     width: calc(33.33% - 10px);
+  //     margin: 20px 0;
+
+  //     .cover {
+  //       height: 300px;
+  //     }
+  //   }
+
+  //   .card-book-infos {
+  //     padding: 16px;
+  //     height: 120px;
+  //     margin: -25px auto;
+  //   }
+
+  //   .container {
+  //     max-width: 1380px;
+  //   }
+
+  //   .card-book {
+  //     width: calc(25% - 10px);
+  //   }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: unset;
+  }
+  //   .container {
+  //     max-width: 1380px;
+  //   }
+
+  //   .card-book {
+  //     width: calc(25% - 10px);
+  //   }
+
+  //   .card-book-infos {
+  //     padding: 16px;
+  //     height: 120px;
+  //     margin: -25px auto;
+  //   }
 }
