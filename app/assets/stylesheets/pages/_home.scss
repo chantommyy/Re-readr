@@ -67,9 +67,61 @@
   }
 }
 
-@media screen and (min-width: 1280px), screen and (max-width: 1920px) {
-  #yourID {
-    overflow-x: auto;
-    overflow-y: auto;
+// @media screen and (min-width: 1280px), screen and (max-width: 1920px) {
+//   #yourID {
+//     overflow-x: auto;
+//     overflow-y: auto;
+//   }
+// }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .landing {
+    width: 768px;
+  }
+
+  .img-logo {
+    width: 100px;
+  }
+
+  .img-gif {
+    width: 520px;
+    left: 124px;
+  }
+
+  .slogan {
+    font-size: 20px;
+  }
+
+  .btn-green {
+    width: 40%;
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .landing {
+    width: 100vw;
+  }
+
+  .img-logo {
+    width: 120px;
+  }
+
+  .img-gif {
+    width: 351px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+
+  .slogan {
+    font-size: 22px;
+  }
+
+  .btn-green {
+    width: 35%;
+    font-size: 15px;
   }
 }
