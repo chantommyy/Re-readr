@@ -67,13 +67,6 @@
   }
 }
 
-// @media screen and (min-width: 1280px), screen and (max-width: 1920px) {
-//   #yourID {
-//     overflow-x: auto;
-//     overflow-y: auto;
-//   }
-// }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .landing {
     width: 768px;
@@ -84,8 +77,11 @@
   }
 
   .img-gif {
-    width: 520px;
-    left: 124px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
   }
 
   .slogan {
