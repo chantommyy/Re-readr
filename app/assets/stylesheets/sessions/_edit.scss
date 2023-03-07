@@ -1,45 +1,47 @@
-.user-profile{
+.user-profile {
+  display: grid;
   margin: 20px;
+  justify-content: center;
 
-  #user_email{
+  #user_email {
     margin: 5px;
-    border: solid 1px #4F7D75;
+    border: solid 1px #4f7d75;
     border-radius: 25px;
     font-size: 13px;
     width: 150px;
   }
 
-  #user_password{
+  #user_password {
     margin: 5px;
     width: 150px;
-    border: solid 1px #4F7D75;
+    border: solid 1px #4f7d75;
     border-radius: 25px;
     font-size: 13px;
   }
 
-  #user_password_confirmation{
+  #user_password_confirmation {
     margin: 5px;
     width: 150px;
-    border: solid 1px #4F7D75;
+    border: solid 1px #4f7d75;
     border-radius: 25px;
     font-size: 13px;
   }
 
-  #user_current_password{
+  #user_current_password {
     margin: 5px;
     width: 150px;
-    border: solid 1px #4F7D75;
+    border: solid 1px #4f7d75;
     border-radius: 25px;
     font-size: 13px;
   }
 
-  .registration-title{
-    color: #4F7D75;
+  .registration-title {
+    color: #4f7d75;
     margin: 50px auto 20px auto;
     font-weight: 200;
   }
 
-  .back-link{
+  .back-link {
     color: #252525;
     text-decoration: none;
     font-size: 30px;
@@ -48,8 +50,8 @@
     top: 20px;
   }
 
-  .btn-flat{
-    background-color: #4F7D75;
+  .btn-flat {
+    background-color: #4f7d75;
     color: white;
     font-size: 13px;
     font-weight: 200;
@@ -58,13 +60,14 @@
     margin: 0px 5px;
   }
 
-  .btn-container{
+  .btn-container {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    padding: 0;
   }
 
-  .form-inputs{
+  .form-inputs {
     display: inline-block;
     justify-content: space-between;
   }

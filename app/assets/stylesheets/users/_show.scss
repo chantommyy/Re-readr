@@ -6,31 +6,31 @@
   width: 350px;
 }
 
-h3{
+h3 {
   font-weight: 400;
   font-size: 20px;
   text-align: center;
   margin-bottom: 15px;
 }
 
-p{
+p {
   font-weight: 200;
   color: black;
   padding-top: 5px;
 }
 
-li{
+li {
   font-weight: 200;
   list-style-type: none;
 }
 
-.tab{
+.tab {
   width: 100%;
   margin: 29px 15px;
   padding-top: 5px;
 }
 
-.each-tab{
+.each-tab {
   border-radius: 7px;
   margin: 1px;
   margin-left: 11px;
@@ -41,7 +41,7 @@ li{
   box-shadow: none;
 }
 
-.tabcontent{
+.tabcontent {
   color: rgb(49, 49, 49);
   box-shadow: none;
   background-color: #ffffff;
@@ -52,26 +52,15 @@ li{
   justify-content: center;
   align-items: center;
 
-  .available-book-img{
+  .available-book-img {
     margin-top: 10px;
   }
 }
 
-
-  // button{
-  //   background-color: red;
-  //   font-family: "Poppins";
-  //   border-radius: 10px;
-  //   color: rgb(255, 255, 255);
-  //   font-size: 15px;
-  // }
-
-
-
-.make-review-container{
-  #review_comment{
+.make-review-container {
+  #review_comment {
     border-radius: 25px;
-    border: solid 2px #4F7D75;
+    border: solid 2px #4f7d75;
     width: 100%;
     height: 40px;
     padding: 10px 20px;
@@ -84,21 +73,21 @@ li{
     margin-top: 120px;
   }
 
-  #new-review{
+  #new-review {
     margin: 20px;
   }
 
-  .form-label{
+  .form-label {
     color: white;
     font-weight: 200;
   }
 
-  .required{
+  .required {
     color: white;
     font-weight: 200;
   }
 
-  .add-review{
+  .add-review {
     font-weight: 300;
     color: white;
     margin-bottom: 20px;
@@ -106,8 +95,8 @@ li{
     font-size: 20px;
   }
 
-  .btn-review-flat{
-    background-color: #D6E5E3;
+  .btn-review-flat {
+    background-color: #d6e5e3;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -118,19 +107,18 @@ li{
     margin-top: 35px;
   }
 
-  .text-alight{
+  .text-alight {
     font-size: 12px;
   }
 
-  #review_rating{
+  #review_rating {
     color: black;
   }
 
-  #review_comment{
+  #review_comment {
     color: black;
   }
-
-  }
+}
 
 .active {
   background-color: #ebe2bc;
@@ -138,11 +126,10 @@ li{
 }
 // root and stars is needed for star ratings
 :root {
-    --star-size: 60px;
-    --star-color: rgb(42, 42, 42);
-    --star-background: #fc0;
-  }
-
+  --star-size: 60px;
+  --star-color: rgb(42, 42, 42);
+  --star-background: #fc0;
+}
 
 .Stars {
   // margin
@@ -155,9 +142,13 @@ li{
   line-height: 1;
 
   &::before {
-    content: '★★★★★';
+    content: "★★★★★";
     letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    background: linear-gradient(
+      90deg,
+      var(--star-background) var(--percent),
+      var(--star-color) var(--percent)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     left: 23px;
@@ -165,20 +156,14 @@ li{
   }
 }
 
-.review-container{
-  // position: absolute;
+.review-container {
   margin-top: 400px;
-//   :root {
-//     --star-size: 60px;
-//     --star-color: #fff;
-//     --star-background: #fc0;
-//   }
-    .Stars {
-      // #adjust below to change the star size in the review cards
-      --star-size: 15px;
-      font-size: var(--star-size);
-    }
 
+  .Stars {
+    // #adjust below to change the star size in the review cards
+    --star-size: 15px;
+    font-size: var(--star-size);
+  }
 
   .review-card {
     border: 2px solid rgb(255, 255, 255);
@@ -195,7 +180,7 @@ li{
     // position: absolute;
     left: 4px;
 
-    .review-comment{
+    .review-comment {
       text-align: left;
       margin-top: 20px;
       font-size: 15px;
@@ -239,7 +224,6 @@ li{
   }
 }
 
-
 // profile container
 .profile-container {
   $brown: #ffffff;
@@ -247,167 +231,160 @@ li{
   left: 38px;
   top: 57px;
 
-
   .profile-card {
+    .center {
+      position: absolute;
+      top: 65px;
+      left: -2px;
+      height: 298px;
+      width: 320px;
+      background: #fff;
+      border-radius: 30%;
+      // overflow: hidden;
+      // box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+    }
 
-      .center {
-        position: absolute;
-        top: 65px;
-        left: -2px;
-        height: 298px;
-        width: 320px;
-        background: #fff;
-        border-radius: 30%;
-        // overflow: hidden;
-        // box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+    .profile {
+      float: left;
+      width: 200px;
+      height: 320px;
+      text-align: center;
+
+      .parameter {
+        font-size: 12px;
+        font-weight: 200;
+        justify-content: center;
       }
 
-      .profile {
-        float: left;
-        width: 200px;
-        height: 320px;
-        text-align: center;
-
-        .parameter {
-          font-size: 12px;
-          font-weight: 200;
-          justify-content: center;
-        }
-
-        .Stars {
-          max-width: 5px;
-          // max-height: 5px;
-            // #adjust below to change the star size
-            --star-size: 15px;
-            font-size: var(--star-size);
-        }
-
-        .image {
-          position: relative;
-          width: 70px;
-          height: 70px;
-          margin: 38px auto 0 auto;
-
-          // .circle-1 {
-          //   position: absolute;
-          //   box-sizing: border-box;
-          //   width: 76px;
-          //   height: 76px;
-          //   top: -3px;
-          //   left: -3px;
-          //   border-width: 1px;
-          //   border-style: solid;
-          //   border-color: $brown $brown $brown transparent;
-          //   border-radius: 50%;
-          //   transition: all 1.5s ease-in-out;
-          // }
-
-          // .circle-2 {
-          //   @extend .circle-1;
-          //   width: 82px;
-          //   height: 82px;
-          //   top: -6px;
-          //   left: -6px;
-          //   border-color: $brown transparent $brown $brown;
-          // }
-
-          img {
-            display: block;
-            border-radius: 50%;
-
-            background: #F5E8DF;
-            width: 80px;
-          }
-
-          &:hover {
-            cursor: pointer;
-
-            .circle-1 {
-              transform: rotate(360deg);
-            }
-
-            .circle-2 {
-              transform: rotate(-360deg);
-            }
-
-          }
-
-        }
-
-        .name {
-          font-size: 15px;
-          font-weight: 400;
-          margin-top: 20px;
-        }
-
-        .job {
-          font-size: 11px;
-          line-height: 15px;
-        }
-
-        .address {
-          margin-top: 33px;
-
-          .btn {
-            display: block;
-            width: 120px;
-            height: 30px;
-            margin: 0 auto 10px auto;
-            background: none;
-            border: 1px solid $brown;
-            border-radius: 15px;
-            font-size: 12px;
-            font-weight: 600;
-            box-sizing: border-box;
-            transition: all .3s ease-in-out;
-            color: $brown;
-
-            &:hover {
-              background: $brown;
-              color: #fff;
-            }
-          }
-        }
-
+      .Stars {
+        max-width: 5px;
+        // max-height: 5px;
+        // #adjust below to change the star size
+        --star-size: 15px;
+        font-size: var(--star-size);
       }
 
-      .stats {
-        float: left;
+      .image {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        margin: 38px auto 0 auto;
 
-        .box {
-          box-sizing: border-box;
-          width: 120px;
-          height: 149px;
-          background: #2c4642;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
+        // .circle-1 {
+        //   position: absolute;
+        //   box-sizing: border-box;
+        //   width: 76px;
+        //   height: 76px;
+        //   top: -3px;
+        //   left: -3px;
+        //   border-width: 1px;
+        //   border-style: solid;
+        //   border-color: $brown $brown $brown transparent;
+        //   border-radius: 50%;
+        //   transition: all 1.5s ease-in-out;
+        // }
 
-          &:hover {
-            background: #c2e1c3;
-            cursor: pointer;
-          }
+        // .circle-2 {
+        //   @extend .circle-1;
+        //   width: 82px;
+        //   height: 82px;
+        //   top: -6px;
+        //   left: -6px;
+        //   border-color: $brown transparent $brown $brown;
+        // }
 
-          &:nth-child(2) {
-            margin: 1px 0;
-          }
-
-        }
-
-        span {
-          font-size: 12px;
+        img {
           display: block;
-          color: white;
+          border-radius: 50%;
+
+          background: #f5e8df;
+          width: 80px;
         }
 
-        .value {
+        &:hover {
+          cursor: pointer;
+
+          .circle-1 {
+            transform: rotate(360deg);
+          }
+
+          .circle-2 {
+            transform: rotate(-360deg);
+          }
+        }
+      }
+
+      .name {
+        font-size: 15px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+
+      .job {
+        font-size: 11px;
+        line-height: 15px;
+      }
+
+      .address {
+        margin-top: 33px;
+
+        .btn {
+          display: block;
+          width: 120px;
+          height: 30px;
+          margin: 0 auto 10px auto;
+          background: none;
+          border: 1px solid $brown;
+          border-radius: 15px;
           font-size: 12px;
-          font-weight: 200;
-          justify-content: center;
+          font-weight: 600;
+          box-sizing: border-box;
+          transition: all 0.3s ease-in-out;
+          color: $brown;
+
+          &:hover {
+            background: $brown;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .stats {
+      float: left;
+
+      .box {
+        box-sizing: border-box;
+        width: 120px;
+        height: 149px;
+        background: #2c4642;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:hover {
+          background: #c2e1c3;
+          cursor: pointer;
         }
 
+        &:nth-child(2) {
+          margin: 1px 0;
+        }
       }
+
+      span {
+        font-size: 12px;
+        display: block;
+        color: white;
       }
+
+      .value {
+        font-size: 12px;
+        font-weight: 200;
+        justify-content: center;
+      }
+    }
   }
+}
