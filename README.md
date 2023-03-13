@@ -15,7 +15,8 @@
 
 <h3>#About the project</h3>
 
-My team (4 people in total) built the project "Re:readr" in 2 weeks. This platform allows you to exchange books you no longer need for ones you'd like to read. To use the platform, simply create an account on Re:readr, enter the ISBN code for the book you'd like to add and exchange it for another book. 
+With Re:readr, you can swap books you've finished reading for ones you're interested in 📚 Signing up for an account is all it takes to get started. 
+Simply enter the book's ISBN code, upload it on the website and swap it for a book you like. The platform was built in just two weeks.
 
 *How it works:*
 
