@@ -23,8 +23,8 @@ Simply enter the book's ISBN code, upload it on the website and swap it for a bo
 - Register an account
 - Enter the ISBN of your book to upload it on the platform
 - Search for available books
-- Send a request for the book you like
-- Exchange your book
+- Send a swap request for the book you like
+- Swap your book once your request is approved
 - Leave a review
 
 **Features**
@@ -107,5 +107,3 @@ Made with love by:
 - [Tommy Chan](https://github.com/chantommyy)
 - [Maxime Sidonio](https://github.com/MximeS)
 - [Dylan Dyhan](https://github.com/dillio523)
-
-
