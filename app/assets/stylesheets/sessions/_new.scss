@@ -1,58 +1,118 @@
-.login-title{
-  color: #4F7D75;
-  margin: 50px auto 20px auto;
-  font-weight: 200;
+.container {
+  .login-title {
+    text-align: center;
+    color: #4f7d75;
+    margin: 150px auto 20px auto;
+    font-weight: 200;
+  }
+
+  #new_user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .links {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  #user_email {
+    margin: 5px;
+    border: solid 1px #4f7d75;
+    border-radius: 25px;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  #user_password {
+    margin: 5px;
+    width: 100%;
+    border: solid 1px #4f7d75;
+    border-radius: 25px;
+    font-size: 13px;
+  }
+
+  #user_password_confirmation {
+    margin: 5px;
+    width: 100%;
+    border: solid 1px #4f7d75;
+    border-radius: 25px;
+    font-size: 13px;
+  }
+
+  #user_address {
+    margin: 5px;
+    width: 150px;
+    border: solid 1px #4f7d75;
+    border-radius: 25px;
+    font-size: 13px;
+  }
+
+  #user_avatar {
+    border: solid 1px #4f7d75;
+    border-radius: 15px;
+    font-size: 13px;
+  }
+
+  .btn-flat {
+    background-color: #4f7d75;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    text-decoration: none;
+    display: block;
+  }
+
+  .sign-up-title {
+    color: #4f7d75;
+    margin: 50px auto 20px auto;
+    font-weight: 200;
+  }
 }
 
-#user_email{
-  margin: 5px;
-  border: solid 1px #4F7D75;
-  border-radius: 25px;
-  font-size: 13px;
-  width: 150px;
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    .login-title {
+      text-align: center;
+    }
+
+    #user_email,
+    #user_password,
+    #user_password_confirmation,
+    #user_address {
+      margin: 5px;
+      width: 100%;
+    }
+
+    #user_avatar {
+      width: 100%;
+    }
+
+    .btn-flat {
+      font-size: 18px;
+    }
+  }
 }
 
-#user_password{
-  margin: 5px;
-  width: 150px;
-  border: solid 1px #4F7D75;
-  border-radius: 25px;
-  font-size: 13px;
-}
-
-#user_password_confirmation{
-  margin: 5px;
-  width: 150px;
-  border: solid 1px #4F7D75;
-  border-radius: 25px;
-  font-size: 13px;
-}
-
-#user_address{
-  margin: 5px;
-  width: 150px;
-  border: solid 1px #4F7D75;
-  border-radius: 25px;
-  font-size: 13px;
-}
-
-#user_avatar{
-  border: solid 1px #4F7D75;
-  border-radius: 15px;
-  font-size: 13px;
-}
-
-.btn-flat{
-  background-color: #4F7D75;
-  color: white;
-  font-size: 16px;
-  font-weight: 200;
-  text-decoration: none;
-  display: block;
-}
-
-.sign-up-title{
-  color: #4F7D75;
-  margin: 50px auto 20px auto;
-  font-weight: 200;
+/* For laptops */
+@media (min-width: 1025px) {
+  .login-title {
+    text-align: center;
+  }
 }
