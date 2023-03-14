@@ -22,8 +22,23 @@
 
   .form-actions {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    text-align: center;
+
+    .btn-flat {
+      background-color: #4f7d75;
+      color: white;
+      font-size: 16px;
+      font-weight: 200;
+      text-decoration: none;
+      display: block;
+    }
+
+    a {
+      margin-top: 10px;
+    }
   }
 
   .links {
@@ -62,27 +77,6 @@
     border-radius: 25px;
     font-size: 13px;
   }
-
-  #user_avatar {
-    border: solid 1px #4f7d75;
-    border-radius: 15px;
-    font-size: 13px;
-  }
-
-  .btn-flat {
-    background-color: #4f7d75;
-    color: white;
-    font-size: 16px;
-    font-weight: 200;
-    text-decoration: none;
-    display: block;
-  }
-
-  .sign-up-title {
-    color: #4f7d75;
-    margin: 50px auto 20px auto;
-    font-weight: 200;
-  }
 }
 
 /* For tablets */
@@ -106,6 +100,7 @@
 
     .btn-flat {
       font-size: 18px;
+      margin-left: 10px;
     }
   }
 }
