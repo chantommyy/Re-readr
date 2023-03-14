@@ -29,6 +29,23 @@ Simply enter the book's ISBN code, upload it on the website and swap it for a bo
 
 **Features**
 
+Adding a book with ISBN:
+
+![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/74564476/224946145-11090a0f-51c4-4cb4-893d-aa7881170011.gif)
+
+Sending a swap request:
+
+![mobile (1)](https://user-images.githubusercontent.com/74564476/224948083-2e32cf41-103e-4a7d-b3d9-555b9b59c390.gif)
+
+Accepting a swap request:
+
+![ezgif com-crop (1)](https://user-images.githubusercontent.com/74564476/224951623-f26f92a3-a76b-4c34-8e17-3c78204d9439.gif)
+
+Leaving a review:
+
+![ezgif com-crop (2)](https://user-images.githubusercontent.com/74564476/224954497-ccf4300a-09f4-460f-97b0-2efeb1959acd.gif)
+
+
 <h3>#Tech Stack</h3>
 
 Re:readr is optimized for use on all devices, but for the best viewing experience, we recommend using a mobile device.
