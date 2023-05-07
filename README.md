@@ -57,6 +57,7 @@ Frameworks & libraries used:
 - [Ruby on Rails](https://rubyonrails.org/)
 - [JavaScript](https://www.javascript.com/)
 - [Stimulus](https://stimulus.hotwired.dev/)
+- [PostgreSQL](https://www.postgresql.org/)
 - [Google Books API](https://developers.google.com/books/docs/v1/using)
 - [CSS & SASS](https://sass-lang.com/)
 - [Bootstrap](https://getbootstrap.com/)
