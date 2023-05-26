@@ -1,9 +1,11 @@
-<h2>Re:readr</h2>
+# Re:readr
+> Live demo [_here_](https://www.re-readr.co.uk/)
 
 <details>
 <summary>Table of Contents</summary>
 
   - [About the Project](#about-the-project)
+  - [Features](#features)
   - [Tech Stack](#tech-stack)
   - [Installation](#installation)
   - [How to contribute](#how-to-contribute)
@@ -13,7 +15,7 @@
 </details>
 
 
-<h3>#About the project</h3>
+## About the project
 
 With Re:readr, you can swap books you've finished reading for ones you're interested in 📚 Signing up for an account is all it takes to get started. 
 Simply enter the book's ISBN code, upload it on the website and swap it for a book you like. The platform was built in just two weeks.
@@ -27,7 +29,7 @@ Simply enter the book's ISBN code, upload it on the website and swap it for a bo
 - Swap your book once your request is approved
 - Leave a review
 
-**Features**
+## Features
 
 Adding a book with ISBN:
 
@@ -46,7 +48,7 @@ Leaving a review:
 ![ezgif com-crop (2)](https://user-images.githubusercontent.com/74564476/224954497-ccf4300a-09f4-460f-97b0-2efeb1959acd.gif)
 
 
-<h3>#Tech Stack</h3>
+## Tech Stack
 
 Re:readr is optimized for use on all devices, but for the best viewing experience, we recommend using a mobile device.
 
@@ -55,6 +57,7 @@ Frameworks & libraries used:
 - [Ruby on Rails](https://rubyonrails.org/)
 - [JavaScript](https://www.javascript.com/)
 - [Stimulus](https://stimulus.hotwired.dev/)
+- [PostgreSQL](https://www.postgresql.org/)
 - [Google Books API](https://developers.google.com/books/docs/v1/using)
 - [CSS & SASS](https://sass-lang.com/)
 - [Bootstrap](https://getbootstrap.com/)
@@ -63,7 +66,7 @@ Version control & deployment
 - [GitHub](https://github.com/saidam90/fluffy_friend)
 - [Heroku](https://fluffy-friend.herokuapp.com/)
 
-<h3>#Installation</h3>
+## Installation
 
 To run our app locally, you will need to have already installed [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable) and [Rails](https://guides.rubyonrails.org/v5.0/getting_started.html). Check them with:
 ```
@@ -102,7 +105,7 @@ $ yarn build --watch
 Then go to [localhost:3000](http://localhost:3000/)
 
 
-<h3>#How to contribute</h3>
+## How to contribute
 
 Feel free to fork our repo and create a pull request with any changes you'd like to see us incorporate. We are open to suggestions🙂
 
@@ -112,11 +115,11 @@ Feel free to fork our repo and create a pull request with any changes you'd like
 - Push to the Branch (`git push origin feature/AmazingFeature`)
 - Open a Pull Request
 
-<h3>#License</h3>
+## License
 
 Created as part of the Le Wagon Full Stack Web Development bootcamp. Feel free to fork and enhance the platform.
 
-<h3>#The team</h3>
+## The team
 
 Made with love by:
 
