@@ -85,3 +85,5 @@ group :test do
 end
 
 gem 'faker'
+
+gem "mime-types-data", "3.2021.1115"

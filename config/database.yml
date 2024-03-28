@@ -84,3 +84,6 @@ production:
   database: Re:readr_production
   username: Re:readr
   password: <%= ENV["RE:READR_DATABASE_PASSWORD"] %>
+  # database: nwuanrlh
+  # username: nwuanrlh
+  # url: <%= ENV["DATABASE_URL"] %>
